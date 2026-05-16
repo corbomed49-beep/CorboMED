@@ -36,7 +36,7 @@ export default function About() {
         >
           <div className="relative h-96 overflow-hidden rounded-3xl lg:h-[480px]">
             <Image
-              src="/images/sections/doctor-about.webp"
+              src="/images/sections/lucascombo2.jpeg"
               alt="Dr. Lucas Gabriel Corbo – Médico Perito da CORBO MED"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

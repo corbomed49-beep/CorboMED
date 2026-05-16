@@ -29,7 +29,7 @@ export default function Hero() {
       {/* Imagem de fundo — doutor posicionado à direita */}
       <div className="absolute inset-0">
         <Image
-          src="/images/sections/hero-bg.png"
+          src="/images/sections/hero-lucas.png"
           alt="Dr. Lucas Gabriel Corbo – Perito Médico CORBO MED"
           fill
           priority
