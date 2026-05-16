@@ -23,10 +23,10 @@ export default function Stats() {
             transition={{ duration: 0.5, delay: index * 0.12 }}
             className="text-center"
           >
-            <p className="font-display text-4xl font-bold text-teal-400 md:text-5xl">
+            <p className="font-display text-3xl font-bold text-teal-400 md:text-4xl lg:text-5xl">
               {stat.value}
             </p>
-            <p className="mt-2 text-sm font-medium text-primary-200 md:text-base">{stat.label}</p>
+            <p className="mt-2 text-xs font-medium text-primary-200 sm:text-sm md:text-base">{stat.label}</p>
           </motion.div>
         ))}
       </div>

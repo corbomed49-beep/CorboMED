@@ -18,7 +18,7 @@ export default function SectionTitle({
   light = false,
 }: SectionTitleProps) {
   return (
-    <div className={`mb-12 md:mb-16 ${centered ? "text-center" : ""}`}>
+    <div className={`mb-12 break-words px-0 md:mb-16 ${centered ? "text-center" : ""}`}>
       {label && (
         <motion.span
           initial={{ opacity: 0, y: 10 }}
@@ -35,7 +35,7 @@ export default function SectionTitle({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className={`font-display text-3xl font-bold md:text-4xl lg:text-5xl ${light ? "text-white" : "text-primary-900"}`}
+        className={`font-display break-words text-3xl font-bold md:text-4xl lg:text-5xl ${light ? "text-white" : "text-primary-900"}`}
       >
         {title}
       </motion.h2>
@@ -45,7 +45,7 @@ export default function SectionTitle({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className={`mx-auto mt-4 max-w-2xl text-base md:text-lg leading-relaxed ${light ? "text-primary-200" : "text-gray-600"}`}
+          className={`mx-auto mt-4 max-w-2xl break-words px-1 text-base leading-relaxed md:text-lg ${light ? "text-primary-200" : "text-gray-600"}`}
         >
           {subtitle}
         </motion.p>

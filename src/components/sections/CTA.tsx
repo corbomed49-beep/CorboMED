@@ -14,7 +14,7 @@ const WHATSAPP_MSG = encodeURIComponent(
 export default function CTA() {
   return (
     <Section background="gradient" id="cta">
-      <div className="relative overflow-hidden rounded-3xl border border-primary-700/30 bg-primary-800/40 px-6 py-14 text-center backdrop-blur-sm md:px-12">
+      <div className="relative overflow-hidden rounded-2xl border border-primary-700/30 bg-primary-800/40 px-4 py-10 text-center backdrop-blur-sm sm:rounded-3xl sm:px-6 sm:py-12 md:px-12 md:py-14">
         {/* Decorativos */}
         <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-teal-500/10 blur-3xl" />
         <div className="pointer-events-none absolute -left-20 -bottom-20 h-64 w-64 rounded-full bg-teal-600/10 blur-3xl" />
@@ -36,7 +36,7 @@ export default function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mb-5 font-display text-3xl font-bold text-white md:text-4xl lg:text-5xl"
+          className="mb-5 font-display text-2xl font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl"
         >
           Pronto para Fortalecer Sua Ação?
         </motion.h2>
@@ -76,7 +76,7 @@ export default function CTA() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-6 text-xs text-primary-400"
+          className="mt-6 break-words px-1 text-xs text-primary-400"
         >
           Advogados · Seguradoras · Clínicas · Pacientes · Atendimento em todo o Brasil
         </motion.p>

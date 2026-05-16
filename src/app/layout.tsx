@@ -97,7 +97,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <GoogleAnalytics />
         <Header />
-        <main>{children}</main>
+        <main className="min-w-0">{children}</main>
         <Footer />
         <WhatsAppButton />
         <Analytics />

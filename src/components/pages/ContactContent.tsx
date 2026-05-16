@@ -153,7 +153,7 @@ export default function ContactContent() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="lg:col-span-2"
         >
-          <div className="rounded-3xl border border-gray-100 bg-white p-8 shadow-md">
+          <div className="rounded-3xl border border-gray-100 bg-white p-4 shadow-md sm:p-8">
             <h3 className="mb-6 text-xl font-bold text-primary-900">Envie sua mensagem</h3>
 
             {status === "success" && (

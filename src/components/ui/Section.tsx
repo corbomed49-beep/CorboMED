@@ -27,7 +27,7 @@ export default function Section({
       id={id}
       className={`py-16 md:py-24 ${backgroundStyles[background]} ${className}`}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">{children}</div>
+      <div className="mx-auto max-w-7xl min-w-0 px-4 sm:px-6 lg:px-8">{children}</div>
     </section>
   );
 }

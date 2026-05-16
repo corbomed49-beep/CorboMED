@@ -99,7 +99,7 @@ export default function Segments() {
             }`}
           >
             {seg.highlight && (
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-teal-500 px-4 py-1 text-xs font-bold text-white">
+              <span className="absolute -top-3 left-1/2 max-w-[calc(100%-1rem)] -translate-x-1/2 rounded-full bg-teal-500 px-3 py-1 text-center text-[10px] font-bold leading-tight text-white sm:px-4 sm:text-xs">
                 Mais Procurado
               </span>
             )}

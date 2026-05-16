@@ -58,21 +58,21 @@ export default function SobrePage() {
   return (
     <>
       {/* Hero da página */}
-      <div className="gradient-primary pb-16 pt-32">
+      <div className="gradient-primary pb-10 pt-28 sm:pb-14 sm:pt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Breadcrumb items={[{ label: "Sobre" }]} />
-          <h1 className="mt-4 font-display text-4xl font-bold text-white md:text-5xl">
+          <h1 className="mt-4 font-display text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">
             Sobre a CORBO MED
           </h1>
           <p className="mt-3 max-w-xl text-base text-primary-200 md:text-lg">
             Dr. Lucas Gabriel Corbo — Perito Médico
           </p>
           {/* Essência da marca */}
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap gap-2 sm:gap-3">
             {essencia.map((item) => (
               <span
                 key={item.label}
-                className="flex items-center gap-2 rounded-full border border-teal-500/30 bg-teal-500/10 px-4 py-1.5 text-sm text-teal-300"
+                className="flex max-w-full items-center gap-2 rounded-full border border-teal-500/30 bg-teal-500/10 px-3 py-1.5 text-xs text-teal-300 sm:px-4 sm:text-sm"
               >
                 {item.icon}
                 {item.label}
@@ -84,8 +84,8 @@ export default function SobrePage() {
 
       {/* Sobre */}
       <Section background="white">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          <div>
+        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:items-center lg:gap-12">
+          <div className="min-w-0">
             <SectionTitle
               label="Nossa História"
               title="Perícia Médica com Propósito"
@@ -104,13 +104,13 @@ export default function SobrePage() {
             </div>
             <MiniCTA message="Olá, Dr. Lucas! Gostaria de saber mais sobre a CORBO MED e seus serviços." />
           </div>
-          <div className="relative h-96 overflow-hidden rounded-3xl lg:h-[480px]">
+          <div className="relative mx-auto aspect-[3/4] w-full max-w-lg max-h-[min(72vh,560px)] overflow-hidden rounded-2xl sm:aspect-[4/5] sm:max-h-[min(68vh,480px)] sm:rounded-3xl md:aspect-[16/11] md:max-h-[420px] lg:mx-0 lg:max-w-none lg:aspect-auto lg:h-[480px] lg:max-h-none">
             <Image
               src="/images/sections/lucascombo2.jpeg"
               alt="Dr. Lucas Gabriel Corbo – Perito Médico da CORBO MED"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-top md:object-[center_22%]"
+              className="object-cover object-[50%_18%] sm:object-[center_20%] md:object-[center_22%] lg:object-[center_25%]"
               loading="lazy"
             />
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-teal-500" />
@@ -120,8 +120,8 @@ export default function SobrePage() {
 
       {/* Formação + Valores */}
       <Section background="gray">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-start">
-          <div>
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-12 items-start">
+          <div className="min-w-0">
             <SectionTitle
               label="Formação e Credenciais"
               title="Qualificação que Fundamenta Resultados"
@@ -146,18 +146,18 @@ export default function SobrePage() {
             </div>
           </div>
 
-          <div className="space-y-4">
+          <div className="min-w-0 space-y-4">
             {valores.map((v, i) => (
               <div
                 key={i}
-                className="flex gap-4 rounded-2xl bg-white p-5 shadow-sm border border-gray-100 hover:border-teal-200 transition-colors"
+                className="flex min-w-0 gap-3 rounded-2xl border border-gray-100 bg-white p-4 shadow-sm transition-colors hover:border-teal-200 sm:gap-4 sm:p-5"
               >
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-teal-50 text-teal-600">
                   {v.icon}
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h3 className="mb-1 font-display font-bold text-primary-900">{v.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{v.text}</p>
+                  <p className="text-sm leading-relaxed text-gray-600">{v.text}</p>
                 </div>
               </div>
             ))}
