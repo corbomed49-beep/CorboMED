@@ -34,30 +34,32 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[70%_center] md:object-[65%_center] lg:object-right-top"
+          className="object-cover object-[70%_center] md:object-[65%_center] lg:object-right-top max-md:brightness-[0.92] max-md:contrast-[1.05]"
         />
       </div>
 
-        {/* Overlay só nos primeiros 25% da largura, da esquerda para a direita */}
-        <div className="absolute inset-y-0 left-0 w-1/4 bg-primary-950/60" />
-        <div className="absolute inset-y-0 left-1/4 w-16 bg-gradient-to-r from-primary-950/60 to-transparent" />
+      {/* Contraste para leitura: mais forte no mobile (jaleco claro); mais suave no desktop */}
+      <div
+        className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-r from-primary-950/95 from-0% via-primary-950/78 via-[55%] to-transparent max-md:via-[68%] md:from-primary-950/55 md:via-primary-950/38 md:via-[48%] lg:from-primary-950/40 lg:via-[42%]"
+        aria-hidden
+      />
 
         {/* Linha decorativa teal lateral */}
-      <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-teal-500/70 to-transparent" />
+      <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-[2] w-1 bg-gradient-to-b from-transparent via-teal-500/70 to-transparent" />
       {/* Brilho teal sutil no canto superior esquerdo */}
-      <div className="pointer-events-none absolute -left-10 top-20 h-72 w-72 rounded-full bg-teal-500/8 blur-3xl" />
+      <div className="pointer-events-none absolute -left-10 top-20 z-[2] h-72 w-72 rounded-full bg-teal-500/8 blur-3xl" />
 
-      <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-4 pt-24 pb-16 sm:px-6 lg:px-8 lg:pt-28">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-4 pt-24 pb-16 sm:px-6 lg:px-8 lg:pt-28">
 
-        {/* Conteúdo — coluna esquerda (max 55% da largura) */}
-        <div className="w-full max-w-2xl">
+        {/* Conteúdo — coluna esquerda; sombra no texto ajuda sobre fundo claro */}
+        <div className="w-full max-w-2xl [&_h1]:drop-shadow-[0_2px_14px_rgba(0,0,0,0.85)] [&_h1]:[text-shadow:0_1px_2px_rgba(8,7,30,0.9)] [&_p]:drop-shadow-[0_1px_10px_rgba(0,0,0,0.75)] [&_li]:drop-shadow-[0_1px_6px_rgba(0,0,0,0.65)]">
 
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-5 inline-flex items-center gap-2 rounded-full border border-teal-500/30 bg-teal-500/10 px-4 py-2"
+            className="mb-5 inline-flex items-center gap-2 rounded-full border border-teal-500/30 bg-primary-950/35 px-4 py-2 backdrop-blur-sm"
           >
             <FiShield size={13} className="text-teal-400" />
             <span className="text-sm font-medium text-teal-400 tracking-wide">
@@ -162,7 +164,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.3 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}
