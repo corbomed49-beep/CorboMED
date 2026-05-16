@@ -9,9 +9,6 @@ const services = [
   { label: "Nexo Causal", href: "/servicos#nexo-causal" },
   { label: "Dano Corporal", href: "/servicos#dano-corporal" },
   { label: "Incapacidade Laboral", href: "/servicos#incapacidade-laboral" },
-  { label: "Invalidez Permanente", href: "/servicos#invalidez" },
-  { label: "Doenças Ocupacionais", href: "/servicos#doencas-ocupacionais" },
-  { label: "Responsabilidade Médica", href: "/servicos#erro-medico" },
 ];
 
 const quickLinks = [

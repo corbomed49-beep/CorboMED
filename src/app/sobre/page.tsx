@@ -110,7 +110,7 @@ export default function SobrePage() {
               alt="Dr. Lucas Gabriel Corbo – Perito Médico da CORBO MED"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              className="object-cover object-top md:object-[center_22%]"
               loading="lazy"
             />
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-teal-500" />

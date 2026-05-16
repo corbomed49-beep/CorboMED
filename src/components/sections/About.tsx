@@ -40,7 +40,7 @@ export default function About() {
               alt="Dr. Lucas Gabriel Corbo – Médico Perito da CORBO MED"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              className="object-cover object-top md:object-[center_22%]"
               loading="lazy"
             />
             {/* Linha decorativa teal */}

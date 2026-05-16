@@ -35,10 +35,6 @@ export default function StructuredData() {
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Perícia de Nexo Causal" } },
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Perícia de Dano Corporal" } },
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Perícia de Incapacidade Laboral" } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Perícia de Invalidez Permanente" } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Perícia de Doenças Ocupacionais" } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Perícia de Responsabilidade Médica" } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Perícia de Saúde Mental" } },
           ],
         },
         sameAs: [

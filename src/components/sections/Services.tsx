@@ -39,78 +39,6 @@ const services = [
     ],
     whatsappMessage: "Olá! Preciso de perícia para Incapacidade Laboral. Como funciona?",
   },
-  {
-    title: "Invalidez Permanente",
-    description: "Análise técnica da extensão e permanência da invalidez.",
-    image: "/images/especialidades/invalidez.webp",
-    items: [
-      "Avaliação de invalidez total e parcial",
-      "Percentual de invalidez para seguros",
-      "Laudos para ações previdenciárias",
-      "Documentação técnica completa",
-    ],
-    whatsappMessage: "Olá! Preciso de perícia para Invalidez Permanente. Quais são os próximos passos?",
-  },
-  {
-    title: "Doenças Ocupacionais",
-    description: "Perícias para doenças adquiridas ou agravadas pelo trabalho.",
-    image: "/images/especialidades/doencas-ocupacionais.webp",
-    items: [
-      "Identificação de doenças profissionais",
-      "LER/DORT e distúrbios osteomusculares",
-      "Perda auditiva induzida por ruído",
-      "Doenças respiratórias ocupacionais",
-    ],
-    whatsappMessage: "Olá! Preciso de perícia para Doença Ocupacional. Pode me orientar?",
-  },
-  {
-    title: "Erro Médico",
-    description: "Avaliação técnica imparcial para casos de responsabilidade médica.",
-    image: "/images/especialidades/erro-medico.webp",
-    items: [
-      "Análise de prontuários e procedimentos",
-      "Identificação de falhas técnicas",
-      "Causalidade entre conduta e dano",
-      "Laudos para defesa e acusação",
-    ],
-    whatsappMessage: "Olá! Preciso de perícia para um caso de Erro Médico. Como posso proceder?",
-  },
-  {
-    title: "Saúde Mental / Dano Psíquico",
-    description: "Avaliação de danos psicológicos e sequelas mentais documentáveis.",
-    image: "/images/especialidades/saude-mental.webp",
-    items: [
-      "Transtorno de estresse pós-traumático",
-      "Dano psíquico em acidentes",
-      "Sequelas de assédio e violência",
-      "Laudo pericial psiquiátrico",
-    ],
-    whatsappMessage: "Olá! Preciso de perícia para Dano Psíquico/Saúde Mental. Pode me ajudar?",
-  },
-  {
-    title: "Acidentes de Trânsito",
-    description: "Perícias especializadas em lesões decorrentes de acidentes de trânsito.",
-    image: "/images/especialidades/acidentes-transito.webp",
-    items: [
-      "Avaliação de lesões corporais",
-      "Nexo causal com o acidente",
-      "Cálculo do dano permanente",
-      "Laudos para seguros DPVAT/SUSEP",
-    ],
-    whatsappMessage: "Olá! Preciso de perícia para acidente de trânsito. Como funciona?",
-  },
-  {
-    title: "Previdência Social (INSS)",
-    description: "Suporte técnico pericial para casos previdenciários.",
-    image: "/images/especialidades/previdencia.webp",
-    items: [
-      "Revisão de benefícios negados",
-      "Aposentadoria por invalidez",
-      "Auxílio-doença e acidente",
-      "BPC/LOAS para pessoas com deficiência",
-    ],
-    whatsappMessage: "Olá! Preciso de perícia para caso do INSS. Pode me orientar?",
-  },
 ];
 
 export default function Services() {
@@ -119,7 +47,7 @@ export default function Services() {
       <SectionTitle
         label="Áreas de Atuação"
         title="Serviços Periciais Especializados"
-        subtitle="Cobertura completa das principais especialidades periciais médicas. Passe o mouse sobre cada card para saber mais."
+        subtitle="Principais linhas de atuação pericial. Passe o mouse sobre cada card para saber mais."
       />
       <div className="flex flex-wrap justify-center gap-6">
         {services.map((service, index) => (

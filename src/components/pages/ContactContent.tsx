@@ -258,12 +258,6 @@ export default function ContactContent() {
                   <option value="nexo-causal">Nexo Causal</option>
                   <option value="dano-corporal">Dano Corporal / Estético</option>
                   <option value="incapacidade-laboral">Incapacidade Laboral</option>
-                  <option value="invalidez">Invalidez Permanente</option>
-                  <option value="doencas-ocupacionais">Doenças Ocupacionais</option>
-                  <option value="erro-medico">Responsabilidade Médica / Erro Médico</option>
-                  <option value="saude-mental">Saúde Mental / Dano Psíquico</option>
-                  <option value="acidentes-transito">Acidentes de Trânsito</option>
-                  <option value="previdencia">Previdência Social (INSS)</option>
                   <option value="outro">Outro</option>
                 </select>
               </div>
