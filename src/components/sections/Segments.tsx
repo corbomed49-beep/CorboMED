@@ -160,7 +160,11 @@ function SegmentCard({
           {showDetails ? "Toque para resumir" : "Toque para ver detalhes"}
         </p>
       ) : (
-        <p className="mt-3 shrink-0 text-[10px] font-medium uppercase tracking-wide text-teal-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+        <p
+          className={`mt-3 shrink-0 text-[10px] font-medium uppercase tracking-wide transition-opacity duration-300 ${
+            seg.highlight ? "text-teal-400/90" : "text-teal-600"
+          } opacity-100 group-hover:opacity-0`}
+        >
           Passe o mouse para ver detalhes
         </p>
       )}
