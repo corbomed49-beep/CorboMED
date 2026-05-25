@@ -82,7 +82,7 @@ export default async function BlogPostPage({
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <Breadcrumb
             items={[
-              { label: "Artigos", href: "/blog" },
+              { label: "Blog", href: "/blog" },
               { label: post.title },
             ]}
           />
@@ -137,7 +137,7 @@ export default async function BlogPostPage({
           className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary-700 hover:text-primary-900 transition-colors"
         >
           <FiArrowLeft size={16} />
-          Voltar para Artigos
+          Voltar para o Blog
         </Link>
       </article>
     </>

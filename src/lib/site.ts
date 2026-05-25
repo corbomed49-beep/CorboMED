@@ -10,7 +10,7 @@ export const navLinks = [
   { label: "Serviços", href: "/#servicos" },
   { label: "Clientes", href: "/#clientes" },
   { label: "Sobre", href: "/sobre" },
-  { label: "Artigos", href: "/blog" },
+  { label: "Blog", href: "/blog" },
   { label: "Contato", href: "/#contato" },
 ] as const;
 
