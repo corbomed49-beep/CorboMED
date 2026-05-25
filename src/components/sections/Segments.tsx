@@ -1,16 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { FiBriefcase, FiUser, FiUsers } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
+import { FiActivity, FiBriefcase, FiUser, FiUsers } from "react-icons/fi";
 import Section from "@/components/ui/Section";
 import SectionTitle from "@/components/ui/SectionTitle";
+import { WHATSAPP_NUMBER } from "@/lib/site";
 
 const segments = [
   {
-    icon: <FiUsers size={28} />,
-    title: "Para advogados",
-    summary:
+    icon: <FiUsers size={32} />,
+    title: "Advogados e Escritórios",
+    description:
       "Apoio técnico para sustentar teses, qualificar quesitos, interpretar laudos e identificar pontos médicos relevantes para a estratégia processual.",
     features: [
       "Assistência técnica em perícias judiciais",
@@ -19,25 +20,14 @@ const segments = [
       "Consultoria técnica especializada",
       "Atendimento prioritário para escritórios parceiros",
     ],
+    whatsappMessage:
+      "Olá, Dr. Lucas! Sou advogado(a) e preciso de suporte pericial para um caso. Poderia me ajudar?",
     highlight: true,
   },
   {
-    icon: <FiUser size={28} />,
-    title: "Para pessoas físicas",
-    summary:
-      "Orientação médico-pericial para quem precisa compreender melhor seu caso em situações de perícia do INSS, incapacidade, acidente, sequelas, erro médico ou negativa de benefício.",
-    features: [
-      "Orientação clara sobre todo o processo",
-      "Laudos para INSS e seguradoras",
-      "Apoio em processos por acidente",
-      "Avaliação de invalidez e incapacidade",
-    ],
-    highlight: false,
-  },
-  {
-    icon: <FiBriefcase size={28} />,
-    title: "Para empresas",
-    summary:
+    icon: <FiBriefcase size={32} />,
+    title: "Seguradoras e Empresas",
+    description:
       "Análise técnica em demandas relacionadas a afastamentos, doenças ocupacionais, acidentes de trabalho, capacidade laboral, nexo causal e repercussões funcionais.",
     features: [
       "Avaliação de invalidez para seguros de vida",
@@ -46,144 +36,127 @@ const segments = [
       "Suporte em acidentes de trabalho",
       "Contratos corporativos com tarifas especiais",
     ],
+    whatsappMessage:
+      "Olá, Dr. Lucas! Represento uma seguradora/empresa e precisamos de suporte pericial. Poderia nos orientar?",
     highlight: false,
   },
   {
-    icon: <FiUsers size={28} />,
-    title: "Para escritórios jurídicos",
-    summary:
-      "Suporte médico especializado para demandas previdenciárias, trabalhistas, cíveis, securitárias e indenizatórias que exigem leitura técnica clara e fundamentada.",
+    icon: <FiActivity size={32} />,
+    title: "Clínicas e Parceiros",
+    description:
+      "Parceria técnica com clínicas, hospitais e profissionais de saúde que precisam de suporte pericial especializado para casos complexos.",
     features: [
-      "Assistência técnica em perícias judiciais",
-      "Laudos para ações cíveis, trabalhistas e previdenciárias",
-      "Revisão crítica de laudos adversários",
-      "Consultoria técnica especializada",
-      "Suporte em demandas securitárias e indenizatórias",
+      "Laudos de segunda opinião",
+      "Consultoria em casos médico-legais",
+      "Parcerias formalizadas com clínicas",
+      "Suporte em responsabilidade médica",
+      "Análise de prontuários e documentação",
     ],
+    whatsappMessage:
+      "Olá, Dr. Lucas! Somos uma clínica/hospital e gostaríamos de discutir uma parceria pericial. Poderia nos contatar?",
+    highlight: false,
+  },
+  {
+    icon: <FiUser size={32} />,
+    title: "Pacientes e Pessoas Físicas",
+    description:
+      "Orientação médico-pericial para quem precisa compreender melhor seu caso em situações de perícia do INSS, incapacidade, acidente, sequelas, erro médico ou negativa de benefício.",
+    features: [
+      "Orientação clara sobre todo o processo",
+      "Laudos para INSS e seguradoras",
+      "Apoio em processos por acidente",
+      "Avaliação de invalidez e incapacidade",
+    ],
+    whatsappMessage:
+      "Olá, Dr. Lucas! Sou paciente e preciso de um laudo pericial. Como funciona o atendimento?",
     highlight: false,
   },
 ];
 
-function SegmentCard({
-  seg,
-  index,
-  coarsePointer,
-}: {
-  seg: (typeof segments)[number];
-  index: number;
-  coarsePointer: boolean;
-}) {
-  const [expanded, setExpanded] = useState(false);
-  const showFeatures = coarsePointer && expanded;
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.45, delay: index * 0.1 }}
-      className={`group relative flex min-h-[240px] flex-col rounded-3xl p-6 transition-shadow duration-300 ${
-        seg.highlight
-          ? "bg-primary-900 text-white shadow-xl ring-2 ring-teal-500/30"
-          : "bg-gray-50 text-primary-900 shadow-md hover:shadow-lg"
-      } ${coarsePointer ? "cursor-pointer" : ""}`}
-      onClick={() => coarsePointer && setExpanded((v) => !v)}
-      onKeyDown={(e) => {
-        if (!coarsePointer) return;
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          setExpanded((v) => !v);
-        }
-      }}
-      tabIndex={coarsePointer ? 0 : undefined}
-      role={coarsePointer ? "button" : undefined}
-      aria-expanded={coarsePointer ? expanded : undefined}
-    >
-      <motion.div
-        whileHover={coarsePointer ? undefined : { y: -2 }}
-        transition={{ type: "spring", stiffness: 300, damping: 24 }}
-        className={`mb-4 flex h-11 w-11 items-center justify-center rounded-2xl ${
-          seg.highlight ? "bg-teal-500/20 text-teal-400" : "bg-primary-100 text-primary-700"
-        }`}
-      >
-        {seg.icon}
-      </motion.div>
-
-      <h3
-        className={`mb-2 font-display text-lg font-bold ${
-          seg.highlight ? "text-white" : "text-primary-900"
-        }`}
-      >
-        {seg.title}
-      </h3>
-
-      <div className="relative flex-1">
-        <p
-          className={`text-sm leading-relaxed transition-opacity duration-300 ${
-            seg.highlight ? "text-primary-300" : "text-gray-600"
-          } ${showFeatures ? "opacity-0" : "opacity-100"} ${
-            !coarsePointer ? "group-hover:opacity-0" : ""
-          }`}
-        >
-          {seg.summary}
-        </p>
-
-        <ul
-          className={`absolute inset-0 space-y-1.5 text-xs transition-opacity duration-300 ${
-            seg.highlight ? "text-primary-300" : "text-gray-700"
-          } ${showFeatures ? "opacity-100" : "opacity-0"} ${
-            !coarsePointer ? "group-hover:opacity-100" : ""
-          }`}
-        >
-          {seg.features.map((feat) => (
-            <li key={feat} className="flex items-start gap-2">
-              <span
-                className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${
-                  seg.highlight ? "bg-teal-400" : "bg-teal-500"
-                }`}
-              />
-              {feat}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {coarsePointer && (
-        <p className="mt-4 text-[10px] font-medium uppercase tracking-wide text-teal-500">
-          {expanded ? "Toque para resumir" : "Toque para ver detalhes"}
-        </p>
-      )}
-      {!coarsePointer && (
-        <p className="mt-4 text-[10px] font-medium uppercase tracking-wide text-teal-500 opacity-0 transition-opacity group-hover:opacity-100">
-          Passe o mouse para ver detalhes
-        </p>
-      )}
-    </motion.div>
-  );
-}
-
 export default function Segments() {
-  const [coarsePointer, setCoarsePointer] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(hover: none)");
-    const update = () => setCoarsePointer(mq.matches);
-    update();
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, []);
-
   return (
     <Section background="white" id="clientes">
       <SectionTitle
         label="Atendimento para quem precisa de clareza médica em decisões jurídicas"
         title="Soluções para Cada Perfil"
-        subtitle="Atendimento especializado para advogados, empresas, escritórios jurídicos e pessoas físicas em todo o Brasil."
+        subtitle="Atendimento especializado e personalizado para advogados, seguradoras, clínicas e pacientes em todo o Brasil."
       />
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
         {segments.map((seg, index) => (
-          <SegmentCard key={seg.title} seg={seg} index={index} coarsePointer={coarsePointer} />
+          <motion.div
+            key={seg.title}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.12 }}
+            className={`relative flex flex-col rounded-3xl p-6 ${
+              seg.highlight
+                ? "bg-primary-900 text-white shadow-2xl shadow-primary-900/30 ring-2 ring-teal-500/30"
+                : "bg-gray-50 text-primary-900 shadow-md transition-shadow hover:shadow-lg"
+            }`}
+          >
+            {seg.highlight && (
+              <span className="absolute -top-3 left-1/2 max-w-[calc(100%-1rem)] -translate-x-1/2 rounded-full bg-teal-500 px-3 py-1 text-center text-[10px] font-bold leading-tight text-white sm:px-4 sm:text-xs">
+                Mais Procurado
+              </span>
+            )}
+
+            <div
+              className={`mb-4 flex h-12 w-12 items-center justify-center rounded-2xl ${
+                seg.highlight ? "bg-teal-500/20 text-teal-400" : "bg-primary-100 text-primary-700"
+              }`}
+            >
+              {seg.icon}
+            </div>
+
+            <h3
+              className={`mb-2 font-display text-lg font-bold ${
+                seg.highlight ? "text-white" : "text-primary-900"
+              }`}
+            >
+              {seg.title}
+            </h3>
+            <p
+              className={`mb-4 text-sm leading-relaxed ${
+                seg.highlight ? "text-primary-300" : "text-gray-600"
+              }`}
+            >
+              {seg.description}
+            </p>
+
+            <ul className="mb-5 flex-1 space-y-1.5">
+              {seg.features.map((feat, i) => (
+                <li
+                  key={i}
+                  className={`flex items-start gap-2 text-xs ${
+                    seg.highlight ? "text-primary-300" : "text-gray-700"
+                  }`}
+                >
+                  <span
+                    className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${
+                      seg.highlight ? "bg-teal-400" : "bg-teal-500"
+                    }`}
+                  />
+                  {feat}
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(seg.whatsappMessage)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors ${
+                seg.highlight
+                  ? "bg-teal-500 text-white hover:bg-teal-600"
+                  : "bg-primary-800 text-white hover:bg-primary-900"
+              }`}
+            >
+              <FaWhatsapp size={15} />
+              Falar com Dr. Corbo
+            </a>
+          </motion.div>
         ))}
       </div>
     </Section>
