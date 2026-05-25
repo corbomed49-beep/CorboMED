@@ -6,7 +6,7 @@ import emailjs from "@emailjs/browser";
 import { FaWhatsapp } from "react-icons/fa";
 import { FiMail, FiMapPin, FiPhone, FiSend, FiCheckCircle, FiAlertCircle } from "react-icons/fi";
 
-const WHATSAPP_NUMBER = "5571999999999";
+import { LOCATION, WHATSAPP_NUMBER } from "@/lib/site";
 
 const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
 const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
@@ -16,15 +16,15 @@ const contactInfo = [
   {
     icon: <FaWhatsapp size={20} />,
     label: "WhatsApp",
-    value: "(11) 99999-9999",
+    value: "(71) 99999-9999",
     href: `https://wa.me/${WHATSAPP_NUMBER}`,
     isExternal: true,
   },
   {
     icon: <FiPhone size={20} />,
     label: "Telefone",
-    value: "(11) 99999-9999",
-    href: "tel:+5571999999999",
+    value: "(71) 99999-9999",
+    href: `tel:+${WHATSAPP_NUMBER}`,
     isExternal: false,
   },
   {
@@ -37,7 +37,7 @@ const contactInfo = [
   {
     icon: <FiMapPin size={20} />,
     label: "Localização",
-    value: "São Paulo – SP · Atendemos todo o Brasil",
+    value: LOCATION,
     href: null,
     isExternal: false,
   },
@@ -45,7 +45,11 @@ const contactInfo = [
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
-export default function ContactContent() {
+interface ContactContentProps {
+  embedded?: boolean;
+}
+
+export default function ContactContent({ embedded = false }: ContactContentProps) {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [formData, setFormData] = useState({
     name: "",
@@ -88,8 +92,19 @@ export default function ContactContent() {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
+    <motion.div
+      className={embedded ? "" : "mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8"}
+      initial={embedded ? false : undefined}
+      whileInView={embedded ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+    >
+      <motion.div
+        className="grid grid-cols-1 gap-12 lg:grid-cols-3"
+        initial={embedded ? { opacity: 0, y: 20 } : false}
+        whileInView={embedded ? { opacity: 1, y: 0 } : undefined}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         {/* Info */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -98,10 +113,16 @@ export default function ContactContent() {
           transition={{ duration: 0.6 }}
           className="lg:col-span-1"
         >
-          <h2 className="mb-2 text-2xl font-bold text-primary-900">Fale Conosco</h2>
-          <p className="mb-8 text-sm text-gray-600 leading-relaxed">
-            Entre em contato pelos canais abaixo ou preencha o formulário. Respondemos em até 24h úteis.
-          </p>
+          {!embedded && (
+            <>
+              <h2 className="mb-2 text-2xl font-bold text-primary-900">Fale Conosco</h2>
+              <p className="mb-8 text-sm leading-relaxed text-gray-600">
+                Entre em contato pelos canais abaixo ou preencha o formulário. Respondemos em até
+                24h úteis.
+              </p>
+            </>
+          )}
+          {embedded && <div className="mb-8" />}
 
           <div className="space-y-5">
             {contactInfo.map((info, i) => (
@@ -302,7 +323,7 @@ export default function ContactContent() {
             </form>
           </div>
         </motion.div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

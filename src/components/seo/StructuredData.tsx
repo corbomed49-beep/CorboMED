@@ -21,6 +21,8 @@ export default function StructuredData() {
         email: "contato@corbomed.com.br",
         address: {
           "@type": "PostalAddress",
+          addressLocality: "Rio de Janeiro",
+          addressRegion: "RJ",
           addressCountry: "BR",
         },
         areaServed: {

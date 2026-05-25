@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
-import BlogCard from "@/components/ui/BlogCard";
 import Section from "@/components/ui/Section";
 import SectionTitle from "@/components/ui/SectionTitle";
 
@@ -39,21 +38,32 @@ export const blogPosts = [
 
 export default function Blog() {
   return (
-    <Section background="white" id="blog">
+    <Section background="gray" id="artigos">
       <SectionTitle
-        label="Blog"
+        label="Artigos"
         title="Conteúdo Especializado"
-        subtitle="Artigos técnicos sobre perícias médicas, direito médico e saúde ocupacional para advogados, empresas e pessoas físicas."
+        subtitle="Artigos técnicos sobre perícias médicas, direito médico e saúde ocupacional."
       />
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-        {blogPosts.map((post, index) => (
-          <BlogCard key={post.slug} {...post} index={index} />
+      <ul className="mx-auto max-w-3xl divide-y divide-gray-200 rounded-2xl border border-gray-100 bg-white px-4 shadow-sm sm:px-6">
+        {blogPosts.map((post) => (
+          <li key={post.slug}>
+            <Link
+              href={`/blog/${post.slug}`}
+              className="group flex items-center justify-between gap-4 py-4 text-sm font-medium text-primary-900 transition-colors hover:text-teal-600 sm:py-5 sm:text-base"
+            >
+              <span className="leading-snug">{post.title}</span>
+              <FiArrowRight
+                size={16}
+                className="shrink-0 text-teal-500 transition-transform group-hover:translate-x-1"
+              />
+            </Link>
+          </li>
         ))}
-      </div>
-      <div className="mt-10 text-center">
+      </ul>
+      <div className="mt-8 text-center">
         <Link
           href="/blog"
-          className="inline-flex items-center gap-2 rounded-lg border-2 border-primary-700 px-6 py-3 text-sm font-semibold text-primary-700 hover:bg-primary-700 hover:text-white transition-colors"
+          className="inline-flex items-center gap-2 rounded-lg border-2 border-primary-700 px-6 py-3 text-sm font-semibold text-primary-700 transition-colors hover:bg-primary-700 hover:text-white"
         >
           Ver todos os artigos <FiArrowRight size={16} />
         </Link>

@@ -1,12 +1,14 @@
 import Hero from "@/components/sections/Hero";
+import HeroIntro from "@/components/sections/HeroIntro";
+import FeatureBar from "@/components/sections/FeatureBar";
+import StrategicAnalysis from "@/components/sections/StrategicAnalysis";
+import Segments from "@/components/sections/Segments";
+import MedicalSupport from "@/components/sections/MedicalSupport";
 import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
-import Segments from "@/components/sections/Segments";
-import Stats from "@/components/sections/Stats";
 import Differentials from "@/components/sections/Differentials";
-import Testimonials from "@/components/sections/Testimonials";
-import ClientsCarousel from "@/components/sections/ClientsCarousel";
 import Blog from "@/components/sections/Blog";
+import ContactSection from "@/components/sections/ContactSection";
 import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
 import FAQSchema from "@/components/seo/FAQSchema";
@@ -16,14 +18,16 @@ export default function Home() {
     <>
       <FAQSchema />
       <Hero />
+      <HeroIntro />
+      <FeatureBar />
+      <StrategicAnalysis />
+      <Segments />
+      <MedicalSupport />
       <About />
       <Services />
-      <Segments />
-      <Stats />
       <Differentials />
-      <ClientsCarousel />
-      <Testimonials />
       <Blog />
+      <ContactSection />
       <FAQ />
       <CTA />
     </>

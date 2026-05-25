@@ -16,7 +16,7 @@ const differentials = [
   {
     icon: <FiAward />,
     title: "Expertise Comprovada",
-    description: "Mais de 15 anos realizando perícias médicas com excelência e aprovação judicial consistente.",
+    description: "Perícias médicas com rigor técnico, embasamento científico e aprovação judicial consistente.",
   },
   {
     icon: <FiFileText />,
@@ -31,7 +31,7 @@ const differentials = [
   {
     icon: <FiGlobe />,
     title: "Atuação Nacional",
-    description: "Atendemos em todos os estados do Brasil, com deslocamento ou teleconsulta quando necessário.",
+    description: "Atendemos em todos os estados do Brasil, com deslocamento quando necessário.",
   },
   {
     icon: <FiLock />,

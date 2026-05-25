@@ -10,7 +10,7 @@ import CTA from "@/components/sections/CTA";
 export const metadata: Metadata = {
   title: "Sobre",
   description:
-    "Conheça a CORBO MED e o Dr. Lucas Gabriel Corbo, Perito Médico com mais de 15 anos de experiência em perícias médicas especializadas para advogados, seguradoras, clínicas e pacientes.",
+    "Conheça a CORBO MED e o Dr. Lucas Gabriel Corbo, Perito Médico especializado em laudos e pareceres periciais para advogados, seguradoras, clínicas e pacientes.",
   openGraph: {
     title: "Sobre | CORBO MED Perícias Médicas",
     description:
@@ -46,12 +46,9 @@ const valores = [
 ];
 
 const formacao = [
-  "Graduação em Medicina",
-  "Especialização em Medicina do Trabalho",
-  "Especialização em Ortopedia e Traumatologia",
-  "Curso de Perícia Médica Judicial",
-  "Formação em Direito Médico e Bioética",
-  "CRM: em atualização",
+  "Graduação em Medicina pela KSMU em Kursk – Rússia",
+  "Especialização pelo Instituto Felipe Hurtado – IFH",
+  "CRM-RJ 52.124847-2",
 ];
 
 export default function SobrePage() {
@@ -91,15 +88,31 @@ export default function SobrePage() {
               title="Perícia Médica com Propósito"
               centered={false}
             />
-            <div className="space-y-4 text-sm md:text-base text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-sm leading-relaxed text-gray-700 md:text-base">
               <p>
-                A CORBO MED nasceu da convicção de que uma boa perícia médica pode ser determinante na vida de uma pessoa. Fundada pelo Dr. Lucas Gabriel Corbo, médico perito com mais de 15 anos de experiência, a empresa se especializou em oferecer laudos periciais que unem rigor científico com linguagem clara e profundo conhecimento do ambiente jurídico.
+                A CORBO MED nasceu da convicção de que uma boa perícia médica pode trazer mais
+                clareza, segurança e direcionamento em processos que envolvem questões de saúde.
               </p>
               <p>
-                Ao longo dos anos, construímos uma reputação sólida atendendo escritórios de advocacia, seguradoras, departamentos jurídicos corporativos, clínicas parceiras e pessoas físicas em todo o Brasil. Cada laudo que emitimos reflete nosso compromisso com a precisão, a ética e a segurança profissional.
+                O Dr. Lucas Gabriel Corbo, médico e fundador da CorboMED, é formado pela{" "}
+                <strong>KSMU – Kursk State Medical University</strong>, em Kursk, Rússia, e
+                aprovado no <strong>REVALIDA pela UFPE – Universidade Federal de Pernambuco</strong>.
               </p>
               <p>
-                Nossa essência de marca resume bem quem somos: <strong>precisão</strong>, <strong>credibilidade</strong>, <strong>clareza</strong> e <strong>ética</strong>. São os pilares que norteiam cada análise pericial e cada relacionamento com nossos clientes.
+                A empresa se especializou em oferecer <strong>laudos e pareceres periciais</strong>{" "}
+                que unem rigor científico, análise documental criteriosa e linguagem clara para
+                apoiar decisões em contextos jurídicos, previdenciários, trabalhistas, cíveis e
+                securitários.
+              </p>
+              <p>
+                Ao longo de sua atuação, a CORBO MED construiu uma reputação sólida atendendo
+                escritórios de advocacia, seguradoras, departamentos jurídicos corporativos,
+                clínicas parceiras e pessoas físicas em todo o Brasil.
+              </p>
+              <p>
+                Cada análise realizada reflete o compromisso da marca com a{" "}
+                <strong>precisão, a credibilidade, a clareza e a ética</strong>, pilares que
+                norteiam cada laudo, parecer e relacionamento com seus clientes.
               </p>
             </div>
             <MiniCTA message="Olá, Dr. Lucas! Gostaria de saber mais sobre a CORBO MED e seus serviços." />

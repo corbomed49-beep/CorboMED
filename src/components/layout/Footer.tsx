@@ -2,8 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
-
-const WHATSAPP_NUMBER = "5571999999999";
+import { LOCATION, navLinks, WHATSAPP_NUMBER } from "@/lib/site";
 
 const services = [
   { label: "Nexo Causal", href: "/servicos#nexo-causal" },
@@ -11,39 +10,26 @@ const services = [
   { label: "Incapacidade Laboral", href: "/servicos#incapacidade-laboral" },
 ];
 
-const quickLinks = [
-  { label: "Início", href: "/" },
-  { label: "Sobre", href: "/sobre" },
-  { label: "Serviços", href: "/servicos" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contato", href: "/contato" },
-];
-
 export default function Footer() {
   return (
     <footer className="bg-primary-950 text-white">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
-          {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="relative mb-5 inline-flex items-center overflow-visible">
-              <span
-                aria-hidden
-                className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[240%] w-[260%] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(ellipse_50%_46%_at_50%_50%,rgba(8,7,30,0.97)_0%,rgba(22,20,72,0.62)_34%,rgba(44,169,160,0.22)_50%,transparent_68%)] blur-sm"
-              />
+            <Link href="/" className="mb-5 inline-flex items-center">
               <Image
                 src="/images/sections/LOGO2.png"
                 alt="CORBO MED Perícias Médicas"
-                width={200}
-                height={52}
-                className="relative z-10 h-14 w-auto object-contain brightness-[1.22] contrast-[1.28] saturate-[1.18] drop-shadow-[0_0_1px_rgba(255,255,255,0.28)] drop-shadow-[0_4px_16px_rgba(0,0,0,0.88)]"
+                width={180}
+                height={48}
+                className="h-12 w-auto object-contain brightness-0 invert"
                 loading="lazy"
               />
             </Link>
-            <p className="text-sm text-primary-300 leading-relaxed mb-2">
+            <p className="mb-2 text-sm leading-relaxed text-primary-300">
               Dr. Lucas Gabriel Corbo — Perito Médico
             </p>
-            <p className="text-sm text-primary-300 leading-relaxed mb-5">
+            <p className="mb-5 text-sm leading-relaxed text-primary-300">
               Perícia médica com rigor técnico, linguagem clara e segurança profissional.
             </p>
             <div className="flex items-center gap-3">
@@ -51,7 +37,7 @@ export default function Footer() {
                 href={`https://wa.me/${WHATSAPP_NUMBER}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-green-500 hover:bg-green-600 transition-colors"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-green-500 transition-colors hover:bg-green-600"
                 aria-label="WhatsApp"
               >
                 <FaWhatsapp size={16} />
@@ -60,7 +46,7 @@ export default function Footer() {
                 href="https://instagram.com/corbomed"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-700 hover:bg-teal-600 transition-colors"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-700 transition-colors hover:bg-teal-600"
                 aria-label="Instagram"
               >
                 <FaInstagram size={16} />
@@ -69,7 +55,7 @@ export default function Footer() {
                 href="https://linkedin.com/in/lucasgabrieltorbo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-700 hover:bg-teal-600 transition-colors"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-700 transition-colors hover:bg-teal-600"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin size={16} />
@@ -77,17 +63,16 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Links Rápidos */}
           <div>
             <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-teal-400">
               Navegação
             </h3>
             <ul className="space-y-2">
-              {quickLinks.map((link) => (
+              {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-primary-300 hover:text-teal-400 transition-colors"
+                    className="text-sm text-primary-300 transition-colors hover:text-teal-400"
                   >
                     {link.label}
                   </Link>
@@ -96,7 +81,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Serviços */}
           <div>
             <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-teal-400">
               Serviços
@@ -106,7 +90,7 @@ export default function Footer() {
                 <li key={s.href}>
                   <Link
                     href={s.href}
-                    className="text-sm text-primary-300 hover:text-teal-400 transition-colors"
+                    className="text-sm text-primary-300 transition-colors hover:text-teal-400"
                   >
                     {s.label}
                   </Link>
@@ -115,7 +99,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contato */}
           <div>
             <h3 className="mb-4 text-xs font-bold uppercase tracking-widest text-teal-400">
               Contato
@@ -127,7 +110,7 @@ export default function Footer() {
                   href={`https://wa.me/${WHATSAPP_NUMBER}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
+                  className="transition-colors hover:text-white"
                 >
                   (71) 99999-9999
                 </a>
@@ -136,23 +119,26 @@ export default function Footer() {
                 <FiMail size={15} className="mt-0.5 shrink-0 text-teal-400" />
                 <a
                   href="mailto:contato@corbomed.com.br"
-                  className="hover:text-white transition-colors"
+                  className="transition-colors hover:text-white"
                 >
                   contato@corbomed.com.br
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm text-primary-300">
                 <FiMapPin size={15} className="mt-0.5 shrink-0 text-teal-400" />
-                <span>Atendemos em todo o Brasil</span>
+                <span>{LOCATION}</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-primary-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-primary-400">
-          <p>© {new Date().getFullYear()} CORBO MED — Perícias Médicas. Todos os direitos reservados.</p>
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-primary-800 pt-6 text-xs text-primary-400 md:flex-row">
           <p>
-            <Link href="/contato" className="hover:text-white transition-colors">
+            © {new Date().getFullYear()} CORBO MED — Perícias Médicas. Todos os direitos
+            reservados.
+          </p>
+          <p>
+            <Link href="/contato" className="transition-colors hover:text-white">
               Política de Privacidade
             </Link>
           </p>

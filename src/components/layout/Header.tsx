@@ -3,95 +3,71 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { FiMenu, FiX } from "react-icons/fi";
-
-const WHATSAPP_NUMBER = "5571999999999";
-const WHATSAPP_MSG = encodeURIComponent("Olá! Gostaria de solicitar uma perícia médica com o Dr. Lucas Corbo.");
-
-const navLinks = [
-  { label: "Início", href: "/" },
-  { label: "Sobre", href: "/sobre" },
-  { label: "Serviços", href: "/servicos" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contato", href: "/contato" },
-];
+import { navLinks, WHATSAPP_MSG, WHATSAPP_NUMBER } from "@/lib/site";
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled
-          ? "bg-primary-950/96 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+    <header className="fixed top-0 left-0 right-0 z-40 bg-primary-950/97 shadow-lg backdrop-blur-md">
+      <motion.div
+        initial={false}
+        className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2.5 sm:px-6 lg:px-8"
+      >
         <Link
           href="/"
           onClick={() => setMobileOpen(false)}
-          className="relative z-10 inline-flex items-center overflow-visible"
+          className="relative z-10 inline-flex shrink-0 items-center"
         >
-          {/* Halo radial + blur: contraste sem “caixa” visível */}
-          <span
-            aria-hidden
-            className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[240%] w-[260%] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(ellipse_50%_46%_at_50%_50%,rgba(8,7,30,0.97)_0%,rgba(22,20,72,0.62)_34%,rgba(44,169,160,0.22)_50%,transparent_68%)] blur-sm"
-          />
           <Image
             src="/images/sections/LOGO2.png"
             alt="CORBO MED Perícias Médicas"
-            width={200}
-            height={52}
-            className="relative z-10 h-14 w-auto object-contain brightness-[1.22] contrast-[1.28] saturate-[1.18] drop-shadow-[0_0_1px_rgba(255,255,255,0.28)] drop-shadow-[0_4px_16px_rgba(0,0,0,0.88)]"
+            width={180}
+            height={48}
+            className="h-11 w-auto object-contain brightness-0 invert sm:h-12"
             priority
           />
         </Link>
 
         {/* Nav Desktop */}
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden min-w-0 flex-1 items-center justify-center gap-4 xl:gap-5 lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-white/80 hover:text-teal-400 transition-colors"
+              className="whitespace-nowrap text-sm font-medium text-white/85 transition-colors hover:text-teal-400"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        {/* CTA Desktop */}
-        <div className="hidden items-center gap-3 lg:flex">
-          <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-lg bg-teal-500 px-4 py-2 text-sm font-semibold text-white hover:bg-teal-600 transition-colors shadow-md"
-          >
-            <FaWhatsapp size={16} />
-            Solicitar Perícia
-          </a>
-        </div>
+        {/* Atendimento WhatsApp */}
+        <a
+          href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden shrink-0 items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-teal-400 lg:flex"
+        >
+          <span>atendimento</span>
+          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-green-500 text-white shadow-md transition-colors hover:bg-green-600">
+            <FaWhatsapp size={18} />
+          </span>
+        </a>
 
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="flex items-center justify-center rounded-lg p-2 text-white lg:hidden"
-          aria-label="Menu"
+          aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={mobileOpen}
         >
           {mobileOpen ? <FiX size={24} /> : <FiMenu size={24} />}
         </button>
-      </div>
+      </motion.div>
 
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -100,15 +76,15 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden bg-primary-950 lg:hidden"
+            className="overflow-hidden border-t border-primary-800 bg-primary-950 lg:hidden"
           >
-            <nav className="flex flex-col px-4 pb-4 pt-2 gap-1">
+            <nav className="flex flex-col gap-1 px-4 pb-4 pt-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-lg px-3 py-3 text-base font-medium text-white hover:bg-primary-800 transition-colors"
+                  className="rounded-lg px-3 py-3 text-base font-medium text-white transition-colors hover:bg-primary-800"
                 >
                   {link.label}
                 </Link>
@@ -117,10 +93,12 @@ export default function Header() {
                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-teal-500 px-4 py-3 text-base font-semibold text-white hover:bg-teal-600 transition-colors"
+                className="mt-2 flex items-center justify-center gap-2 rounded-lg px-4 py-3 text-base font-semibold text-white transition-colors hover:bg-primary-800"
               >
-                <FaWhatsapp size={18} />
-                Solicitar Perícia pelo WhatsApp
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-green-500">
+                  <FaWhatsapp size={18} />
+                </span>
+                atendimento
               </a>
             </nav>
           </motion.div>
