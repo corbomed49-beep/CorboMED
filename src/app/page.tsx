@@ -1,5 +1,4 @@
 import Hero from "@/components/sections/Hero";
-import HeroIntro from "@/components/sections/HeroIntro";
 import FeatureBar from "@/components/sections/FeatureBar";
 import StrategicAnalysis from "@/components/sections/StrategicAnalysis";
 import Segments from "@/components/sections/Segments";
@@ -18,7 +17,6 @@ export default function Home() {
     <>
       <FAQSchema />
       <Hero />
-      <HeroIntro />
       <FeatureBar />
       <StrategicAnalysis />
       <Segments />
