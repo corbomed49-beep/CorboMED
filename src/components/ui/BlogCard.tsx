@@ -44,7 +44,7 @@ export default function BlogCard({
             className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
             loading="lazy"
           />
-          <span className="absolute top-4 left-4 rounded-full bg-primary-700 px-3 py-1 text-xs font-semibold text-white">
+          <span className="absolute top-4 right-4 rounded-full bg-primary-700 px-3 py-1 text-xs font-semibold text-white">
             {category}
           </span>
         </div>
