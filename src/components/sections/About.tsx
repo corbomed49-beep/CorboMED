@@ -17,13 +17,14 @@ export default function About() {
         transition={{ duration: 0.6 }}
         className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-12"
       >
-        <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[320px] lg:mx-0 lg:flex lg:max-w-[360px] lg:flex-col lg:justify-center">
+        <div className="relative mx-auto w-full max-w-[320px] sm:max-w-[380px] lg:mx-0 lg:flex lg:max-w-[440px] lg:flex-col lg:justify-center">
           <div className="relative aspect-[2/3] w-full overflow-hidden rounded-2xl sm:rounded-3xl lg:aspect-auto lg:min-h-[580px] lg:flex-1">
             <Image
               src="/images/sections/lucassobre.jpeg"
               alt="Dr. Lucas Gabriel Corbo – Médico Perito da CORBO MED"
               fill
-              sizes="(max-width: 1024px) 320px, 360px"
+              quality={95}
+              sizes="(max-width: 640px) 320px, (max-width: 1024px) 380px, 440px"
               className="object-cover object-[center_15%]"
               loading="lazy"
             />

@@ -29,7 +29,8 @@ export default function Hero() {
           alt="Dr. Lucas Gabriel Corbo – Perito Médico CORBO MED"
           fill
           priority
-          sizes="100vw"
+          quality={95}
+          sizes="(max-width: 1672px) 100vw, 1672px"
           className="object-cover object-[72%_center] sm:object-[70%_center] md:object-[65%_center] lg:object-right-top max-md:brightness-[0.92] max-md:contrast-[1.05]"
         />
       </motion.div>
