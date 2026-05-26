@@ -23,7 +23,7 @@ const questions = [
 
 export default function MedicalSupport() {
   return (
-    <Section background="gray">
+    <Section background="white">
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10">
         <motion.div
           initial={{ opacity: 0, x: -24 }}

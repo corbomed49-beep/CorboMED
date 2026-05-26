@@ -11,7 +11,7 @@ const EVAL_MSG = encodeURIComponent(
 
 export default function StrategicAnalysis() {
   return (
-    <Section background="gray">
+    <Section background="white">
       <motion.span
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}

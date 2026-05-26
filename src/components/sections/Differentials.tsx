@@ -57,11 +57,12 @@ const differentials = [
 
 export default function Differentials() {
   return (
-    <Section background="gray" id="diferenciais">
+    <Section background="dark" id="diferenciais">
       <SectionTitle
         label="Nossos Diferenciais"
         title="Por Que Escolher a CorboMED?"
         subtitle="Compromisso com a excelência técnica e a satisfação de quem confia em nosso trabalho."
+        light={true}
       />
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {differentials.map((diff, index) => (

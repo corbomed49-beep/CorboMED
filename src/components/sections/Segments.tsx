@@ -184,7 +184,7 @@ export default function Segments() {
   }, []);
 
   return (
-    <Section background="white" id="clientes">
+    <Section background="teal-light" id="clientes">
       <SectionTitle
         label="Atendimento para quem precisa de clareza médica em decisões jurídicas"
         title="Soluções para Cada Perfil"

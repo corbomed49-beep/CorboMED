@@ -4,7 +4,7 @@ import SectionTitle from "@/components/ui/SectionTitle";
 
 export default function ContactSection() {
   return (
-    <Section background="white" id="contato">
+    <Section background="teal-light" id="contato">
       <SectionTitle
         label="Contato"
         title="Fale com a CORBO MED"

@@ -47,7 +47,7 @@ export const faqData = [
 
 export default function FAQ() {
   return (
-    <Section background="gray" id="faq">
+    <Section background="white" id="faq">
       <div className="mx-auto max-w-3xl">
         <SectionTitle
           label="Perguntas Frequentes"
