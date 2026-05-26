@@ -15,16 +15,16 @@ export default function About() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:items-center lg:gap-12"
+        className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:items-stretch lg:gap-12"
       >
-        <div className="relative mx-auto flex w-full max-w-lg flex-col lg:mx-0 lg:max-w-none">
-          <div className="relative aspect-[3/4] w-full max-h-[min(72vh,560px)] overflow-hidden rounded-2xl sm:aspect-[4/5] sm:max-h-[min(68vh,480px)] sm:rounded-3xl md:aspect-[16/11] md:max-h-[420px] lg:aspect-auto lg:h-[480px] lg:max-h-none">
+        <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[320px] lg:mx-0 lg:flex lg:max-w-[360px] lg:flex-col lg:justify-center">
+          <div className="relative aspect-[2/3] w-full overflow-hidden rounded-2xl sm:rounded-3xl lg:aspect-auto lg:min-h-[580px] lg:flex-1">
             <Image
               src="/images/sections/lucassobre.jpeg"
               alt="Dr. Lucas Gabriel Corbo – Médico Perito da CORBO MED"
               fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-center"
+              sizes="(max-width: 1024px) 320px, 360px"
+              className="object-cover object-[center_15%]"
               loading="lazy"
             />
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-teal-500" />
