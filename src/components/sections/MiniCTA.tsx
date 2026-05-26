@@ -32,7 +32,7 @@ export default function MiniCTA({
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex shrink-0 items-center gap-2 rounded-lg bg-teal-500 px-5 py-2.5 text-sm font-semibold text-white hover:bg-teal-600 transition-colors"
+        className="flex shrink-0 items-center gap-2 rounded-full bg-teal-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-teal-700/30 transition-all duration-200 hover:bg-teal-600 hover:shadow-teal-600/40 hover:scale-105 active:scale-95"
       >
         <FaWhatsapp size={16} />
         Falar Agora

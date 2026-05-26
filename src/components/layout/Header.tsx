@@ -50,12 +50,10 @@ export default function Header() {
           href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden shrink-0 items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-teal-400 lg:flex"
+          className="hidden shrink-0 items-center gap-2 rounded-full bg-green-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-green-700/30 transition-all duration-200 hover:bg-green-600 hover:shadow-green-600/40 hover:scale-105 active:scale-95 lg:flex"
         >
-          <span>atendimento</span>
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-green-500 text-white shadow-md transition-colors hover:bg-green-600">
-            <FaWhatsapp size={18} />
-          </span>
+          <FaWhatsapp size={17} />
+          <span>Atendimento</span>
         </a>
 
         {/* Mobile toggle */}
@@ -93,12 +91,10 @@ export default function Header() {
                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 flex items-center justify-center gap-2 rounded-lg px-4 py-3 text-base font-semibold text-white transition-colors hover:bg-primary-800"
+                className="mt-2 flex items-center justify-center gap-2 rounded-full bg-green-500 px-5 py-3 text-base font-semibold text-white shadow-lg shadow-green-700/30 transition-all duration-200 hover:bg-green-600 active:scale-95"
               >
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-green-500">
-                  <FaWhatsapp size={18} />
-                </span>
-                atendimento
+                <FaWhatsapp size={20} />
+                Atendimento
               </a>
             </nav>
           </motion.div>

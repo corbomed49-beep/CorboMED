@@ -41,7 +41,7 @@ export default function BlogCard({
             alt={title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
             loading="lazy"
           />
           <span className="absolute top-4 left-4 rounded-full bg-primary-700 px-3 py-1 text-xs font-semibold text-white">

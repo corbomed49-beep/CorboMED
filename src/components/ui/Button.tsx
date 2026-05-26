@@ -21,19 +21,19 @@ interface ButtonProps {
 
 const variantStyles: Record<Variant, string> = {
   primary:
-    "bg-primary-800 text-white shadow-lg shadow-primary-950/30 hover:bg-primary-700 border border-primary-700",
+    "bg-primary-800 text-white shadow-lg shadow-primary-950/30 hover:bg-primary-700 hover:shadow-xl hover:shadow-primary-900/40 border border-primary-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 active:scale-95",
   secondary:
-    "bg-teal-500 text-white shadow-lg shadow-teal-700/30 hover:bg-teal-600 border border-teal-400",
+    "bg-teal-500 text-white shadow-lg shadow-teal-700/30 hover:bg-teal-600 hover:shadow-xl hover:shadow-teal-600/40 border border-teal-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-300 active:scale-95",
   outline:
-    "bg-transparent text-primary-800 border-2 border-primary-800 hover:bg-primary-50",
+    "bg-transparent text-primary-800 border-2 border-primary-800 hover:bg-primary-50 hover:border-primary-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 active:scale-95",
   ghost:
-    "bg-transparent text-white border-2 border-white/60 hover:bg-white/10",
+    "bg-transparent text-white border-2 border-white/60 hover:bg-white/10 hover:border-white/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 active:scale-95",
 };
 
 const sizeStyles: Record<Size, string> = {
   sm: "px-4 py-2 text-sm",
   md: "px-6 py-3 text-base",
-  lg: "px-8 py-4 text-lg",
+  lg: "px-8 py-4 text-base font-bold tracking-wide",
 };
 
 export default function Button({
