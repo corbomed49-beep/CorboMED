@@ -20,11 +20,11 @@ export default function About() {
         <div className="relative mx-auto flex w-full max-w-lg flex-col lg:mx-0 lg:max-w-none">
           <div className="relative aspect-[3/4] w-full max-h-[min(72vh,560px)] overflow-hidden rounded-2xl sm:aspect-[4/5] sm:max-h-[min(68vh,480px)] sm:rounded-3xl md:aspect-[16/11] md:max-h-[420px] lg:aspect-auto lg:h-[480px] lg:max-h-none">
             <Image
-              src="/images/sections/lucascombo2.jpeg"
+              src="/images/sections/lucassobre.jpeg"
               alt="Dr. Lucas Gabriel Corbo – Médico Perito da CORBO MED"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-[50%_18%] sm:object-[center_20%] md:object-[center_22%] lg:object-[center_25%]"
+              className="object-cover object-center"
               loading="lazy"
             />
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-teal-500" />
