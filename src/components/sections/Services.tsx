@@ -6,7 +6,7 @@ const services = [
   {
     title: "Nexo Causal",
     description: "Estabelecemos a relação técnica entre o dano e o evento causador.",
-    image: "/images/blogs/nexocausal.png",
+    image: "/images/especialidades/nexocausal.png",
     items: [
       "Análise do histórico clínico completo",
       "Correlação entre evento e lesão",
@@ -18,7 +18,7 @@ const services = [
   {
     title: "Dano Corporal e Estético",
     description: "Avaliação precisa de lesões físicas e sequelas visíveis.",
-    image: "/images/blogs/danoCorporal.png",
+    image: "/images/especialidades/danoCorporal.png",
     items: [
       "Quantificação das sequelas",
       "Avaliação do dano estético",
@@ -30,7 +30,7 @@ const services = [
   {
     title: "Incapacidade Laboral",
     description: "Determinamos o grau e duração da incapacidade para o trabalho.",
-    image: "/images/blogs/IncapacidadeLaboral.png",
+    image: "/images/especialidades/IncapacidadeLaboral.png",
     items: [
       "Avaliação da capacidade funcional",
       "Perícias para INSS e seguradoras",

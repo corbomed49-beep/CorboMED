@@ -3,16 +3,7 @@ import { blogPosts } from "@/components/sections/Blog";
 
 const BASE_URL = "https://corbomed.com.br";
 
-const extraPosts = [
-  "como-funciona-pericia-medica-judicial",
-  "invalidez-permanente-seguros-vida",
-  "burnout-doenca-ocupacional-pericia",
-];
-
-const allSlugs = [
-  ...blogPosts.map((p) => p.slug),
-  ...extraPosts,
-];
+const allSlugs = blogPosts.map((p) => p.slug);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [

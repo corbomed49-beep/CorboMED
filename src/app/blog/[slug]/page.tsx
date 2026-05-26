@@ -7,42 +7,8 @@ import Breadcrumb from "@/components/ui/Breadcrumb";
 import MiniCTA from "@/components/sections/MiniCTA";
 import { blogPosts } from "@/components/sections/Blog";
 
-const allPosts = [
-  ...blogPosts,
-  {
-    title: "Como funciona o processo de perícia médica judicial: guia completo",
-    excerpt:
-      "Entenda passo a passo como funciona uma perícia médica judicial, os direitos das partes, o papel do perito e do assistente técnico e como se preparar.",
-    slug: "como-funciona-pericia-medica-judicial",
-    image: "/images/blogs/pericia-judicial.webp",
-    date: "15 Mar 2026",
-    readTime: "8 min",
-    category: "Perícia Judicial",
-  },
-  {
-    title: "Invalidez permanente em seguros de vida: como calcular e comprovar",
-    excerpt:
-      "Entenda o que configura invalidez permanente para fins de seguro, como é calculado o percentual e qual documentação médica é necessária para acionar a cobertura.",
-    slug: "invalidez-permanente-seguros-vida",
-    image: "/images/blogs/invalidez-seguro.webp",
-    date: "01 Mar 2026",
-    readTime: "6 min",
-    category: "Seguros",
-  },
-  {
-    title: "Burnout como doença ocupacional: o que a perícia médica avalia",
-    excerpt:
-      "Com o reconhecimento do burnout pela OMS como doença ocupacional, a demanda por perícias especializadas cresceu. Saiba o que é analisado pelo médico perito.",
-    slug: "burnout-doenca-ocupacional-pericia",
-    image: "/images/blogs/burnout.webp",
-    date: "15 Fev 2026",
-    readTime: "5 min",
-    category: "Saúde Mental",
-  },
-];
-
 export async function generateStaticParams() {
-  return allPosts.map((post) => ({ slug: post.slug }));
+  return blogPosts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({
@@ -51,7 +17,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = allPosts.find((p) => p.slug === slug);
+  const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return { title: "Post não encontrado" };
 
   return {
@@ -73,7 +39,7 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = allPosts.find((p) => p.slug === slug);
+  const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
   return (
