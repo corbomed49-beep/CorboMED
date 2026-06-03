@@ -18,7 +18,7 @@ export default function Hero() {
         className="absolute inset-0"
       >
         <Image
-          src="/images/sections/hero-lucas.png"
+          src="/images/sections/hero-lucas (1).png"
           alt="Dr. Lucas Gabriel Corbo – Perito Médico CORBO MED"
           fill
           priority
