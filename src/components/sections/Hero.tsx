@@ -24,7 +24,7 @@ export default function Hero() {
           priority
           quality={95}
           sizes="(max-width: 1672px) 100vw, 1672px"
-          className="object-cover object-[65%_8%] sm:object-[62%_6%] md:object-[60%_5%] lg:object-[58%_4%] max-md:brightness-[0.92] max-md:contrast-[1.05]"
+          className="object-cover object-[65%_8%] sm:object-[62%_6%] md:object-[60%_5%] lg:object-[58%_4%]"
         />
       </motion.div>
 
