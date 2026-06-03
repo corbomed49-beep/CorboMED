@@ -27,7 +27,7 @@ export default function Header() {
             alt="CORBO MED Perícias Médicas"
             width={180}
             height={48}
-            className="h-11 w-auto object-contain sm:h-12"
+            className="h-14 w-auto object-contain sm:h-16"
             priority
           />
         </Link>
