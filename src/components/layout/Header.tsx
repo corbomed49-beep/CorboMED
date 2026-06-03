@@ -3,16 +3,30 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { FiMenu, FiX } from "react-icons/fi";
 import { navLinks, WHATSAPP_MSG, WHATSAPP_NUMBER } from "@/lib/site";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 bg-primary-950/97 shadow-lg backdrop-blur-md">
+    <header
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
+        scrolled
+          ? "bg-primary-950/97 shadow-lg backdrop-blur-md"
+          : "bg-transparent backdrop-blur-none shadow-none"
+      }`}
+    >
       <motion.div
         initial={false}
         className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2.5 sm:px-6 lg:px-8"
