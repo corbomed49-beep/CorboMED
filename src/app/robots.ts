@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://corbomed.com.br/sitemap.xml",
+    sitemap: "https://www.corbomed.com.br/sitemap.xml",
   };
 }

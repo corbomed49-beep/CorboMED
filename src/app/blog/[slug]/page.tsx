@@ -27,10 +27,10 @@ export async function generateMetadata({
     openGraph: {
       title: `${post.title} | CorboMED`,
       description: post.excerpt,
-      url: `https://corbomed.com.br/blog/${slug}`,
+      url: `https://www.corbomed.com.br/blog/${slug}`,
       images: [{ url: post.image, alt: post.title }],
     },
-    alternates: { canonical: `https://corbomed.com.br/blog/${slug}` },
+    alternates: { canonical: `https://www.corbomed.com.br/blog/${slug}` },
   };
 }
 
@@ -43,14 +43,14 @@ export default async function BlogPostPage({
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
-  const canonicalUrl = `https://corbomed.com.br/blog/${slug}`;
+  const canonicalUrl = `https://www.corbomed.com.br/blog/${slug}`;
   const blogPostingSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
     headline: post.title,
     description: post.excerpt,
-    image: [`https://corbomed.com.br${post.image}`],
+    image: [`https://www.corbomed.com.br${post.image}`],
     datePublished: (post as any).dateISO,
     author: {
       "@type": "Person",
@@ -61,7 +61,7 @@ export default async function BlogPostPage({
       name: "CORBO MED Perícias Médicas",
       logo: {
         "@type": "ImageObject",
-        url: "https://corbomed.com.br/images/sections/LOGO2.png",
+        url: "https://www.corbomed.com.br/images/sections/LOGO2.png",
       },
     },
   };
@@ -70,8 +70,8 @@ export default async function BlogPostPage({
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Início", item: "https://corbomed.com.br" },
-          { name: "Blog", item: "https://corbomed.com.br/blog" },
+          { name: "Início", item: "https://www.corbomed.com.br" },
+          { name: "Blog", item: "https://www.corbomed.com.br/blog" },
           { name: post.title, item: canonicalUrl },
         ]}
       />

@@ -4,12 +4,12 @@ export default function StructuredData() {
     "@graph": [
       {
         "@type": ["LocalBusiness", "MedicalBusiness"],
-        "@id": "https://corbomed.com.br/#business",
+        "@id": "https://www.corbomed.com.br/#business",
         name: "CORBO MED Perícias Médicas",
         alternateName: "Corbo Med",
-        url: "https://corbomed.com.br",
-        logo: "https://corbomed.com.br/images/sections/LOGO2.png",
-        image: "https://corbomed.com.br/images/sections/hero-lucas.png",
+        url: "https://www.corbomed.com.br",
+        logo: "https://www.corbomed.com.br/images/sections/LOGO2.png",
+        image: "https://www.corbomed.com.br/images/sections/hero-lucas.png",
         description:
           "Perícia médica com rigor técnico, linguagem clara e segurança profissional. Dr. Lucas Gabriel Corbo – Perito Médico. Atendemos advogados, seguradoras, clínicas e pacientes em todo o Brasil.",
         founder: {

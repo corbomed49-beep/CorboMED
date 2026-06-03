@@ -16,9 +16,9 @@ export const metadata: Metadata = {
     title: "Sobre | CORBO MED Perícias Médicas",
     description:
       "Dr. Lucas Gabriel Corbo – Perito Médico. Precisão técnica, clareza documental e segurança profissional em cada laudo.",
-    url: "https://corbomed.com.br/sobre",
+    url: "https://www.corbomed.com.br/sobre",
   },
-  alternates: { canonical: "https://corbomed.com.br/sobre" },
+  alternates: { canonical: "https://www.corbomed.com.br/sobre" },
 };
 
 const essencia = [
@@ -57,8 +57,8 @@ export default function SobrePage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Início", item: "https://corbomed.com.br" },
-          { name: "Sobre", item: "https://corbomed.com.br/sobre" },
+          { name: "Início", item: "https://www.corbomed.com.br" },
+          { name: "Sobre", item: "https://www.corbomed.com.br/sobre" },
         ]}
       />
       {/* Hero da página */}

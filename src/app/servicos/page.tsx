@@ -11,9 +11,9 @@ export const metadata: Metadata = {
     title: "Serviços Periciais | CorboMED Perícias Médicas",
     description:
       "Perícias médicas especializadas em Nexo Causal, Dano Corporal, Incapacidade Laboral, Invalidez Permanente, Doenças Ocupacionais e Responsabilidade Médica.",
-    url: "https://corbomed.com.br/servicos",
+    url: "https://www.corbomed.com.br/servicos",
   },
-  alternates: { canonical: "https://corbomed.com.br/servicos" },
+  alternates: { canonical: "https://www.corbomed.com.br/servicos" },
 };
 
 export default function ServicosPage() {
@@ -21,8 +21,8 @@ export default function ServicosPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Início", item: "https://corbomed.com.br" },
-          { name: "Serviços", item: "https://corbomed.com.br/servicos" },
+          { name: "Início", item: "https://www.corbomed.com.br" },
+          { name: "Serviços", item: "https://www.corbomed.com.br/servicos" },
         ]}
       />
       <div className="gradient-primary pb-16 pt-32">

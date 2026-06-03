@@ -11,9 +11,9 @@ export const metadata: Metadata = {
     title: "Blog | CORBO MED Perícias Médicas",
     description:
       "Conteúdo especializado sobre perícias médicas e direito médico para advogados, empresas e pessoas físicas.",
-    url: "https://corbomed.com.br/blog",
+    url: "https://www.corbomed.com.br/blog",
   },
-  alternates: { canonical: "https://corbomed.com.br/blog" },
+  alternates: { canonical: "https://www.corbomed.com.br/blog" },
 };
 
 export default function BlogPage() {

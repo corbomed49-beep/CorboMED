@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contato | CorboMED Perícias Médicas",
     description: "Fale com nossos especialistas em perícias médicas. WhatsApp, e-mail ou formulário.",
-    url: "https://corbomed.com.br/contato",
+    url: "https://www.corbomed.com.br/contato",
   },
-  alternates: { canonical: "https://corbomed.com.br/contato" },
+  alternates: { canonical: "https://www.corbomed.com.br/contato" },
 };
 
 export default function ContatoPage() {
@@ -20,8 +20,8 @@ export default function ContatoPage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Início", item: "https://corbomed.com.br" },
-          { name: "Contato", item: "https://corbomed.com.br/contato" },
+          { name: "Início", item: "https://www.corbomed.com.br" },
+          { name: "Contato", item: "https://www.corbomed.com.br/contato" },
         ]}
       />
       <div className="gradient-primary pb-16 pt-32">

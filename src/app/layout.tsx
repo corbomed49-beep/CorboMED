@@ -23,7 +23,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://corbomed.com.br"),
+  metadataBase: new URL("https://www.corbomed.com.br"),
   title: {
     default: "CORBO MED – Perícias Médicas | Lucas Gabriel Corbo",
     template: "%s | CORBO MED Perícias Médicas",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://corbomed.com.br",
+    url: "https://www.corbomed.com.br",
     siteName: "CORBO MED Perícias Médicas",
     title: "CORBO MED – Perícias Médicas | Lucas Gabriel Corbo",
     description:
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://corbomed.com.br",
+    canonical: "https://www.corbomed.com.br",
   },
 };
 

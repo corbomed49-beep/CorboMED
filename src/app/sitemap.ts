@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { blogPosts } from "@/components/sections/Blog";
 
-const BASE_URL = "https://corbomed.com.br";
+const BASE_URL = "https://www.corbomed.com.br";
 
 const allSlugs = blogPosts.map((p) => p.slug);
 
