@@ -16,14 +16,14 @@ const contactInfo = [
   {
     icon: <FaWhatsapp size={20} />,
     label: "WhatsApp",
-    value: "(71) 99999-9999",
+    value: "(11) 94073-5069",
     href: `https://wa.me/${WHATSAPP_NUMBER}`,
     isExternal: true,
   },
   {
     icon: <FiPhone size={20} />,
     label: "Telefone",
-    value: "(71) 99999-9999",
+    value: "(11) 94073-5069",
     href: `tel:+${WHATSAPP_NUMBER}`,
     isExternal: false,
   },
@@ -276,10 +276,11 @@ export default function ContactContent({ embedded = false }: ContactContentProps
                   className="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20 transition bg-white"
                 >
                   <option value="">Selecione o tipo de perícia</option>
-                  <option value="nexo-causal">Nexo Causal</option>
-                  <option value="dano-corporal">Dano Corporal / Estético</option>
-                  <option value="incapacidade-laboral">Incapacidade Laboral</option>
-                  <option value="outro">Outro</option>
+                  <option value="previdenciaria">Previdenciária</option>
+                  <option value="civel">Cível</option>
+                  <option value="securitaria">Securitária</option>
+                  <option value="trabalhista">Trabalhista</option>
+                  <option value="outra">Outra</option>
                 </select>
               </div>
 

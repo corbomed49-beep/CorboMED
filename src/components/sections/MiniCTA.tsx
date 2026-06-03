@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
 
-const WHATSAPP_NUMBER = "5571999999999";
+const WHATSAPP_NUMBER = "5511940735069";
 
 interface MiniCTAProps {
   message?: string;

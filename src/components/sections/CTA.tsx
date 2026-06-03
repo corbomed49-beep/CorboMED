@@ -6,7 +6,7 @@ import { FiArrowRight } from "react-icons/fi";
 import Button from "@/components/ui/Button";
 import Section from "@/components/ui/Section";
 
-const WHATSAPP_NUMBER = "5571999999999";
+const WHATSAPP_NUMBER = "5511940735069";
 const WHATSAPP_MSG = encodeURIComponent(
   "Olá, Dr. Lucas! Gostaria de solicitar uma perícia médica com a CORBO MED. Poderia me ajudar?"
 );

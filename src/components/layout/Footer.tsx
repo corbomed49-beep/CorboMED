@@ -112,7 +112,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="transition-colors hover:text-white"
                 >
-                  (71) 99999-9999
+                  (11) 94073-5069
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm text-primary-300">

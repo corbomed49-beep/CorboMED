@@ -52,29 +52,29 @@ export default function About() {
             className="space-y-4 text-sm leading-relaxed text-gray-700 md:text-base"
           >
             <p>
-              A CORBO MED nasceu da convicção de que uma boa perícia médica pode trazer mais
-              clareza, segurança e direcionamento em processos que envolvem questões de saúde.
+              O Dr. Lucas Gabriel Corbo atua na elaboração de laudos, pareceres técnicos e
+              assistência pericial em demandas previdenciárias, trabalhistas, cíveis e securitárias,
+              com atuação especializada em incapacidade laborativa, nexo causal, sequelas, dano
+              corporal e responsabilidade médica.
             </p>
             <p>
-              O Dr. Lucas Gabriel Corbo, médico e fundador da CorboMED, é formado pela{" "}
-              <strong>KSMU – Kursk State Medical University</strong>, em Kursk, Rússia, e
-              aprovado no <strong>REVALIDA pela UFPE – Universidade Federal de Pernambuco</strong>.
+              Seu trabalho combina rigor científico, análise documental minuciosa e comunicação
+              técnica adaptada ao contexto jurídico, oferecendo suporte estratégico para processos
+              que exigem fundamentação consistente, clareza técnica e segurança probatória.
             </p>
             <p>
-              A empresa se especializou em oferecer <strong>laudos e pareceres periciais</strong>{" "}
-              que unem rigor científico, análise documental criteriosa e linguagem clara para
-              apoiar decisões em contextos jurídicos, previdenciários, trabalhistas, cíveis e
-              securitários.
+              Formado pela <strong>Kursk State Medical University</strong>, na Rússia, e aprovado
+              no <strong>REVALIDA pela Universidade Federal de Pernambuco (UFPE)</strong>,
+              consolidou sua atuação na produção de laudos e pareceres periciais voltados às áreas
+              previdenciária, trabalhista, cível e securitária.
             </p>
             <p>
-              Ao longo de sua atuação, a CORBO MED construiu uma reputação sólida atendendo
-              escritórios de advocacia, seguradoras, departamentos jurídicos corporativos,
-              clínicas parceiras e pessoas físicas em todo o Brasil.
-            </p>
-            <p>
-              Cada análise realizada reflete o compromisso da marca com a{" "}
-              <strong>precisão, a credibilidade, a clareza e a ética</strong>, pilares que
-              norteiam cada laudo, parecer e relacionamento com seus clientes.
+              A CORBO MED nasceu com um propósito claro: transformar informações médicas complexas
+              em análises técnicas objetivas, claras e juridicamente úteis. Com atuação em todo o
+              Brasil, a empresa atende escritórios de advocacia, seguradoras, departamentos
+              jurídicos, clínicas parceiras e clientes particulares, sempre pautada pela{" "}
+              <strong>ética, credibilidade, precisão técnica e compromisso com a excelência</strong>{" "}
+              em cada análise realizada.
             </p>
           </motion.div>
 

@@ -8,7 +8,7 @@ export default function StructuredData() {
         name: "CORBO MED Perícias Médicas",
         alternateName: "Corbo Med",
         url: "https://corbomed.com.br",
-        logo: "https://corbomed.com.br/images/logo.webp",
+        logo: "https://corbomed.com.br/images/sections/LOGO2.png",
         image: "https://corbomed.com.br/images/sections/hero-lucas.png",
         description:
           "Perícia médica com rigor técnico, linguagem clara e segurança profissional. Dr. Lucas Gabriel Corbo – Perito Médico. Atendemos advogados, seguradoras, clínicas e pacientes em todo o Brasil.",
@@ -17,7 +17,7 @@ export default function StructuredData() {
           name: "Lucas Gabriel Corbo",
           jobTitle: "Perito Médico",
         },
-        telephone: "+5571999999999",
+        telephone: "+5511940735069",
         email: "contato@corbomed.com.br",
         address: {
           "@type": "PostalAddress",

@@ -1,4 +1,4 @@
-export const WHATSAPP_NUMBER = "5571999999999";
+export const WHATSAPP_NUMBER = "5511940735069";
 
 export const WHATSAPP_MSG = encodeURIComponent(
   "Olá, Dr. Lucas! Vi o site da CORBO MED e gostaria de solicitar uma perícia médica. Poderia me passar mais informações?"

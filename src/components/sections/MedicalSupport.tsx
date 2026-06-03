@@ -45,17 +45,12 @@ export default function MedicalSupport() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="space-y-4 text-sm leading-relaxed text-primary-200 md:text-base"
+            className="text-sm leading-relaxed text-primary-200 md:text-base"
           >
             <p>
               Laudos, exames, prontuários e diagnósticos nem sempre são simples de interpretar.
               Em processos judiciais, previdenciários ou trabalhistas, entender corretamente essas
               informações faz diferença na condução do caso.
-            </p>
-            <p>
-              Com uma avaliação médico-pericial, é possível esclarecer pontos importantes,
-              identificar fragilidades e compreender melhor o que os documentos mostram sobre a
-              situação clínica.
             </p>
           </motion.div>
           <motion.div
@@ -63,7 +58,7 @@ export default function MedicalSupport() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-8"
+            className="mt-6"
           >
             <Button
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=${ANALYSIS_MSG}`}
@@ -81,23 +76,30 @@ export default function MedicalSupport() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.08 }}
-          className="grid grid-cols-1 gap-3 sm:grid-cols-2"
+          className="flex flex-col gap-3"
         >
-          {questions.map((question, index) => (
-            <motion.div
-              key={question}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="flex items-start gap-3 rounded-2xl border border-gray-100 bg-white p-4 shadow-sm"
-            >
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-50 text-teal-600">
-                <FiCheckCircle size={16} />
-              </span>
-              <p className="text-sm font-medium leading-snug text-gray-800">{question}</p>
-            </motion.div>
-          ))}
+          <p className="text-sm leading-relaxed text-gray-600 md:text-base">
+            Com uma avaliação médico-pericial, é possível esclarecer pontos importantes,
+            identificar fragilidades e compreender melhor o que os documentos mostram sobre a
+            situação clínica.
+          </p>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {questions.map((question, index) => (
+              <motion.div
+                key={question}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="flex items-start gap-3 rounded-2xl border border-gray-100 bg-white p-4 shadow-sm"
+              >
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-50 text-teal-600">
+                  <FiCheckCircle size={16} />
+                </span>
+                <p className="text-sm font-medium leading-snug text-gray-800">{question}</p>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </Section>

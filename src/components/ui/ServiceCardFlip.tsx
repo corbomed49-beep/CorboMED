@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
-const WHATSAPP_NUMBER = "5571999999999";
+const WHATSAPP_NUMBER = "5511940735069";
 
 interface ServiceCardFlipProps {
   title: string;

@@ -6,6 +6,7 @@ import Section from "@/components/ui/Section";
 import SectionTitle from "@/components/ui/SectionTitle";
 import MiniCTA from "@/components/sections/MiniCTA";
 import CTA from "@/components/sections/CTA";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "Sobre",
@@ -54,6 +55,12 @@ const formacao = [
 export default function SobrePage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Início", item: "https://corbomed.com.br" },
+          { name: "Sobre", item: "https://corbomed.com.br/sobre" },
+        ]}
+      />
       {/* Hero da página */}
       <div className="gradient-primary pb-10 pt-28 sm:pb-14 sm:pt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

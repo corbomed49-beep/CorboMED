@@ -6,6 +6,7 @@ import { FiArrowLeft, FiCalendar, FiClock } from "react-icons/fi";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import MiniCTA from "@/components/sections/MiniCTA";
 import { blogPosts } from "@/components/sections/Blog";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -27,7 +28,7 @@ export async function generateMetadata({
       title: `${post.title} | CorboMED`,
       description: post.excerpt,
       url: `https://corbomed.com.br/blog/${slug}`,
-      images: [{ url: post.image, width: 1200, height: 630, alt: post.title }],
+      images: [{ url: post.image, alt: post.title }],
     },
     alternates: { canonical: `https://corbomed.com.br/blog/${slug}` },
   };
@@ -42,8 +43,42 @@ export default async function BlogPostPage({
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
+  const canonicalUrl = `https://corbomed.com.br/blog/${slug}`;
+  const blogPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
+    headline: post.title,
+    description: post.excerpt,
+    image: [`https://corbomed.com.br${post.image}`],
+    datePublished: (post as any).dateISO,
+    author: {
+      "@type": "Person",
+      name: "Lucas Gabriel Corbo",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "CORBO MED Perícias Médicas",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://corbomed.com.br/images/sections/LOGO2.png",
+      },
+    },
+  };
+
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Início", item: "https://corbomed.com.br" },
+          { name: "Blog", item: "https://corbomed.com.br/blog" },
+          { name: post.title, item: canonicalUrl },
+        ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+      />
       <div className="gradient-primary pb-16 pt-32">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <Breadcrumb

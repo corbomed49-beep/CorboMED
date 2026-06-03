@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { FiX } from "react-icons/fi";
 
-const WHATSAPP_NUMBER = "5571999999999";
+const WHATSAPP_NUMBER = "5511940735069";
 const DEFAULT_MESSAGE =
   "Olá, Dr. Lucas! Vim pelo site da CORBO MED e gostaria de saber mais sobre as perícias médicas.";
 

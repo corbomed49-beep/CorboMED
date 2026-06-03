@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import ServicesContent from "@/components/pages/ServicesContent";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "Serviços",
@@ -18,6 +19,12 @@ export const metadata: Metadata = {
 export default function ServicosPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Início", item: "https://corbomed.com.br" },
+          { name: "Serviços", item: "https://corbomed.com.br/servicos" },
+        ]}
+      />
       <div className="gradient-primary pb-16 pt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Breadcrumb items={[{ label: "Serviços" }]} />

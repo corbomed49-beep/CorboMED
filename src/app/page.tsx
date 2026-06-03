@@ -18,9 +18,9 @@ export default function Home() {
       <FAQSchema />
       <Hero />
       <FeatureBar />
+      <MedicalSupport />
       <StrategicAnalysis />
       <Segments />
-      <MedicalSupport />
       <About />
       <Services />
       <Differentials />

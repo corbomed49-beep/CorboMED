@@ -53,20 +53,11 @@ export const metadata: Metadata = {
     title: "CORBO MED – Perícias Médicas | Lucas Gabriel Corbo",
     description:
       "Análises periciais com rigor técnico, clareza documental e segurança profissional. Advogados, seguradoras, empresas e pacientes.",
-    images: [
-      {
-        url: "/images/og-image.webp",
-        width: 1200,
-        height: 630,
-        alt: "CORBO MED Perícias Médicas",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "CORBO MED – Perícias Médicas",
     description: "Perícias médicas com rigor técnico, clareza documental e segurança profissional.",
-    images: ["/images/og-image.webp"],
   },
   robots: {
     index: true,

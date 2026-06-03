@@ -2,15 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FiCheckCircle } from "react-icons/fi";
 import Button from "@/components/ui/Button";
 import { WHATSAPP_MSG, WHATSAPP_NUMBER } from "@/lib/site";
-
-const bullets = [
-  "Análise de incapacidade, sequelas e nexo causal",
-  "Laudos e pareceres médicos bem fundamentados",
-  "Suporte técnico para decisões mais seguras",
-];
 
 export default function Hero() {
   return (
@@ -77,43 +70,8 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.2 }}
-            className="mt-4 space-y-3 text-sm leading-relaxed text-primary-200 sm:mt-5 sm:space-y-4 sm:text-base"
-          >
-            <p>
-              O Dr. Lucas Gabriel Corbo atua na elaboração de laudos, pareceres médicos e
-              assistência pericial em demandas previdenciárias, trabalhistas, cíveis e
-              securitárias, com foco em incapacidade, nexo causal, sequelas, dano corporal e
-              responsabilidade médica.
-            </p>
-            <p>
-              Com rigor científico, análise documental aprofundada e linguagem acessível ao
-              contexto jurídico, oferece suporte para processos que exigem segurança técnica e
-              fundamentação consistente.
-            </p>
-          </motion.div>
-
-          <motion.ul
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.28 }}
-            className="mb-7 mt-5 space-y-2 sm:mb-8 sm:mt-6 sm:space-y-2.5"
-          >
-            {bullets.map((item) => (
-              <li
-                key={item}
-                className="flex items-start gap-2.5 text-sm text-primary-200 sm:text-base"
-              >
-                <FiCheckCircle size={16} className="mt-0.5 shrink-0 text-teal-400" />
-                {item}
-              </li>
-            ))}
-          </motion.ul>
-
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.36 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-8"
           >
             <Button
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`}
