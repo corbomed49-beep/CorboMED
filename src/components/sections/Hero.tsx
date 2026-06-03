@@ -29,7 +29,7 @@ export default function Hero() {
       </motion.div>
 
       <motion.div
-        className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-r from-primary-950/95 from-0% via-primary-950/78 via-[55%] to-transparent max-md:via-[68%] md:from-primary-950/55 md:via-primary-950/38 md:via-[48%] lg:from-primary-950/40 lg:via-[42%]"
+        className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-primary-950/60 via-primary-950/40 to-primary-950/20 md:bg-gradient-to-r md:from-primary-950/55 md:via-primary-950/38 md:via-[48%] md:to-transparent lg:from-primary-950/40 lg:via-[42%]"
         aria-hidden
       />
 
