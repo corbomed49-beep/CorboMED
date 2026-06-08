@@ -150,4 +150,34 @@
       animation: none;
     }
   }
+
+  @keyframes feature-bar-ticker {
+    0%,
+    24% {
+      transform: translateX(0);
+    }
+    28%,
+    52% {
+      transform: translateX(calc(-100% / 6));
+    }
+    56%,
+    80% {
+      transform: translateX(calc(-200% / 6));
+    }
+    84%,
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .feature-bar-ticker {
+    animation: feature-bar-ticker 14s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .feature-bar-ticker {
+      animation: none;
+      transform: translateX(0);
+    }
+  }
 }
