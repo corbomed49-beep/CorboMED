@@ -29,12 +29,12 @@ export default function Hero() {
       </motion.div>
 
       <motion.div
-        className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-primary-950/60 via-primary-950/40 to-primary-950/20 md:bg-gradient-to-r md:from-primary-950/55 md:via-primary-950/38 md:via-[48%] md:to-transparent lg:from-primary-950/40 lg:via-[42%]"
+        className="pointer-events-none absolute inset-0 z-[1] hidden bg-gradient-to-r from-primary-950/55 via-primary-950/38 via-[48%] to-transparent md:block lg:from-primary-950/40 lg:via-[42%]"
         aria-hidden
       />
 
       <div className="pointer-events-none absolute left-0 top-0 bottom-0 z-[2] w-1 bg-gradient-to-b from-transparent via-teal-500/70 to-transparent" />
-      <div className="pointer-events-none absolute -left-10 top-20 z-[2] h-72 w-72 rounded-full bg-teal-500/8 blur-3xl" />
+      <div className="pointer-events-none absolute -left-10 top-20 z-[2] hidden h-72 w-72 rounded-full bg-teal-500/8 blur-3xl md:block" />
 
       <div className="relative z-10 flex min-h-[100dvh] w-full items-center mx-auto max-w-7xl px-4 pb-16 pt-28 sm:px-6 sm:pb-20 sm:pt-32 lg:px-8 lg:pt-36 lg:pb-20">
         <div className="w-full max-w-xl [&_h1]:drop-shadow-[0_2px_14px_rgba(0,0,0,0.85)] [&_h1]:[text-shadow:0_1px_2px_rgba(8,7,30,0.9)] [&_h2]:drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)] [&_p]:drop-shadow-[0_1px_10px_rgba(0,0,0,0.75)]">

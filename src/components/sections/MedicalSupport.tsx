@@ -32,7 +32,7 @@ export default function MedicalSupport() {
           transition={{ duration: 0.6 }}
           className="relative overflow-hidden rounded-3xl border border-primary-700/40 bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 p-6 text-white shadow-xl sm:p-8 md:p-10"
         >
-          <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-teal-500/10 blur-3xl" />
+          <div className="pointer-events-none absolute -right-16 -top-16 hidden h-48 w-48 rounded-full bg-teal-500/10 blur-3xl md:block" />
           <p className="mb-3 text-xs font-bold uppercase tracking-widest text-teal-400">
             Suporte médico-pericial
           </p>
