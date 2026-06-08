@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import HeroCTA from "@/components/ui/HeroCTA";
 
 export default function Hero() {
@@ -16,16 +15,20 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="absolute inset-0"
       >
-        <Image
-          src="/images/sections/hero-lucas.png"
-          alt="Dr. Lucas Gabriel Corbo – Perito Médico CORBO MED"
-          fill
-          priority
-          unoptimized
-          quality={100}
-          sizes="100vw"
-          className="object-cover object-[72%_12%] sm:object-[68%_10%] md:object-[65%_8%] lg:object-[58%_4%]"
-        />
+        {/* Mobile: maior resolução para evitar upscale | Desktop: enquadramento wide */}
+        <picture className="block h-full w-full">
+          <source
+            media="(min-width: 768px)"
+            srcSet="/images/sections/hero-lucas%20(1).png"
+          />
+          <img
+            src="/images/sections/hero-lucas.png"
+            alt="Dr. Lucas Gabriel Corbo – Perito Médico CORBO MED"
+            fetchPriority="high"
+            decoding="async"
+            className="h-full w-full object-cover object-[72%_12%] sm:object-[68%_10%] md:object-[60%_5%] lg:object-[58%_4%]"
+          />
+        </picture>
       </motion.div>
 
       <motion.div
