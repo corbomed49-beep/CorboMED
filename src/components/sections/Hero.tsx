@@ -2,8 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Button from "@/components/ui/Button";
-import { WHATSAPP_MSG, WHATSAPP_NUMBER } from "@/lib/site";
+import HeroCTA from "@/components/ui/HeroCTA";
 
 export default function Hero() {
   return (
@@ -74,14 +73,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-8"
           >
-            <Button
-              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`}
-              variant="secondary"
-              size="lg"
-              className="w-full sm:w-auto"
-            >
-              Solicite agora
-            </Button>
+            <HeroCTA />
           </motion.div>
         </div>
       </div>
