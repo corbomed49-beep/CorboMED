@@ -37,11 +37,11 @@ export default function Header() {
           className="relative z-10 inline-flex shrink-0 items-center"
         >
           <Image
-            src="/images/sections/CM alta .png"
+            src="/images/sections/LOGOHEROBg.png"
             alt="CORBO MED Perícias Médicas"
-            width={180}
-            height={48}
-            className="h-14 w-auto object-contain sm:h-16"
+            width={230}
+            height={57}
+            className="h-11 w-auto object-contain sm:h-14"
             priority
           />
         </Link>
