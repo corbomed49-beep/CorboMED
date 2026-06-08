@@ -18,13 +18,14 @@ export default function Hero() {
         className="absolute inset-0"
       >
         <Image
-          src="/images/sections/hero-lucas (1).png"
+          src="/images/sections/hero-lucas.png"
           alt="Dr. Lucas Gabriel Corbo – Perito Médico CORBO MED"
           fill
           priority
-          quality={95}
-          sizes="(max-width: 1672px) 100vw, 1672px"
-          className="object-cover object-[65%_8%] sm:object-[62%_6%] md:object-[60%_5%] lg:object-[58%_4%]"
+          unoptimized
+          quality={100}
+          sizes="100vw"
+          className="object-cover object-[72%_12%] sm:object-[68%_10%] md:object-[65%_8%] lg:object-[58%_4%]"
         />
       </motion.div>
 
