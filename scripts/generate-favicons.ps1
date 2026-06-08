@@ -1,8 +1,8 @@
 Add-Type -AssemblyName System.Drawing
 
-$srcPath = Join-Path $PSScriptRoot "..\public\images\sections\CM alta .png"
+$srcPath = Join-Path $PSScriptRoot "..\public\images\sections\FaviconCM.png"
 $src = [System.Drawing.Bitmap]::FromFile($srcPath)
-$bg = [System.Drawing.Color]::FromArgb(255, 8, 7, 30)
+$bg = [System.Drawing.Color]::FromArgb(255, 0, 0, 0)
 
 function Save-Icon {
     param(
@@ -36,10 +36,11 @@ function Save-Icon {
 
 $root = Join-Path $PSScriptRoot ".."
 
-Save-Icon -Size 512 -Path (Join-Path $root "src\app\icon.png") -PaddingRatio 0.05
-Save-Icon -Size 180 -Path (Join-Path $root "src\app\apple-icon.png") -PaddingRatio 0.06
-Save-Icon -Size 48 -Path (Join-Path $root "public\favicon-48.png") -PaddingRatio 0.04
-Save-Icon -Size 32 -Path (Join-Path $root "public\favicon-32.png") -PaddingRatio 0.03
-Save-Icon -Size 16 -Path (Join-Path $root "public\favicon-16.png") -PaddingRatio 0.02
+Save-Icon -Size 512 -Path (Join-Path $root "src\app\icon.png") -PaddingRatio 0
+Save-Icon -Size 180 -Path (Join-Path $root "src\app\apple-icon.png") -PaddingRatio 0
+Save-Icon -Size 180 -Path (Join-Path $root "public\apple-icon.png") -PaddingRatio 0
+Save-Icon -Size 48 -Path (Join-Path $root "public\favicon-48.png") -PaddingRatio 0
+Save-Icon -Size 32 -Path (Join-Path $root "public\favicon-32.png") -PaddingRatio 0
+Save-Icon -Size 16 -Path (Join-Path $root "public\favicon-16.png") -PaddingRatio 0
 
 $src.Dispose()

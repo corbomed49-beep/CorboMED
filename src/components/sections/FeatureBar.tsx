@@ -21,11 +21,11 @@ const items = [
 
 function FeatureItem({ icon, label }: { icon: ReactNode; label: string }) {
   return (
-    <div className="flex min-w-full shrink-0 items-center justify-center gap-3 px-4">
+    <div className="flex shrink-0 items-center gap-3 px-8">
       <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-teal-500/15 text-teal-400">
         {icon}
       </span>
-      <p className="whitespace-nowrap text-[clamp(0.625rem,2.6vw,0.875rem)] font-bold uppercase tracking-wide text-white">
+      <p className="whitespace-nowrap text-xs font-bold uppercase tracking-wide text-white">
         {label}
       </p>
     </div>
@@ -45,14 +45,10 @@ export default function FeatureBar() {
         className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
       >
         {/* Mobile: ticker horizontal em loop */}
-        <div
-          className="relative overflow-hidden md:hidden"
-          aria-live="polite"
-          aria-atomic="true"
-        >
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-primary-950 to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-primary-950 to-transparent" />
-          <div className="feature-bar-ticker flex">
+        <div className="relative overflow-hidden md:hidden">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-primary-950 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-primary-950 to-transparent" />
+          <div className="feature-bar-ticker flex w-max">
             {tickerItems.map((item, index) => (
               <FeatureItem key={`${item.label}-${index}`} icon={item.icon} label={item.label} />
             ))}

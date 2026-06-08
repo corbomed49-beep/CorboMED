@@ -73,6 +73,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.corbomed.com.br",
   },
+  themeColor: "#000000",
   icons: {
     icon: [
       { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
