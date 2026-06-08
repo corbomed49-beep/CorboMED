@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import GoogleTags from "@/components/analytics/GoogleTags";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import StructuredData from "@/components/seo/StructuredData";
@@ -73,6 +73,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.corbomed.com.br",
   },
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png" }],
+    apple: [{ url: "/icon.png", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({
@@ -84,9 +88,9 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${inter.variable} ${montserrat.variable}`}>
       <head>
         <StructuredData />
+        <GoogleTags />
       </head>
       <body className="font-sans antialiased">
-        <GoogleAnalytics />
         <Header />
         <main className="min-w-0">{children}</main>
         <Footer />
