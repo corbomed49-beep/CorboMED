@@ -1,3 +1,5 @@
+export const revalidate = 60;
+
 import Hero from "@/components/sections/Hero";
 import FeatureBar from "@/components/sections/FeatureBar";
 import StrategicAnalysis from "@/components/sections/StrategicAnalysis";
