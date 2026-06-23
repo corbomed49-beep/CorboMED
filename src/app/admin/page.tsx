@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import Link from "next/link";
 import AdminHeader from "@/components/admin/AdminHeader";
 import { getAllPostsAdmin } from "@/lib/posts";
