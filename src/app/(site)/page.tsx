@@ -1,4 +1,4 @@
-export const revalidate = 60;
+export const revalidate = 30;
 
 import Hero from "@/components/sections/Hero";
 import FeatureBar from "@/components/sections/FeatureBar";
