@@ -3,10 +3,7 @@ import { Inter, Montserrat } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import GoogleTags from "@/components/analytics/GoogleTags";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import StructuredData from "@/components/seo/StructuredData";
-import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import "./globals.css";
 
 const inter = Inter({
@@ -97,10 +94,7 @@ export default function RootLayout({
         <GoogleTags />
       </head>
       <body className="font-sans antialiased">
-        <Header />
-        <main className="min-w-0">{children}</main>
-        <Footer />
-        <WhatsAppButton />
+        {children}
         <Analytics />
         <SpeedInsights />
       </body>

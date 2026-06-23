@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import BlogCard from "@/components/ui/BlogCard";
-import { blogPosts } from "@/components/sections/Blog";
+import { getPublishedPosts, toPostCard } from "@/lib/posts";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -16,7 +18,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.corbomed.com.br/blog" },
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const posts = await getPublishedPosts();
+  const cards = posts.map(toPostCard);
+
   return (
     <>
       <div className="gradient-primary pb-10 pt-28 sm:pb-14 sm:pt-32">
@@ -33,7 +38,7 @@ export default function BlogPage() {
 
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {blogPosts.map((post, index) => (
+          {cards.map((post, index) => (
             <BlogCard key={post.slug} {...post} index={index} />
           ))}
         </div>
