@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import GoogleTags from "@/components/analytics/GoogleTags";
+import GoogleTags, { GoogleTagManagerNoScript } from "@/components/analytics/GoogleTags";
+import WhatsAppClickTracker from "@/components/analytics/WhatsAppClickTracker";
 import StructuredData from "@/components/seo/StructuredData";
 import "./globals.css";
 
@@ -94,7 +95,9 @@ export default function RootLayout({
         <GoogleTags />
       </head>
       <body className="font-sans antialiased">
+        <GoogleTagManagerNoScript />
         {children}
+        <WhatsAppClickTracker />
         <Analytics />
         <SpeedInsights />
       </body>
